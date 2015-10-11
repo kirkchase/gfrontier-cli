@@ -1,0 +1,255 @@
+Objects in game
+GameBoard
+
+Game Stack (parent)
+id: Int
+name: String
+type: Enum
+//not yet location: Enum
+state: Enum
+cards: [GameCard]()
+
+** StackType **
+Deck
+Selected
+Hand
+Points
+Discard
+Missions
+Events
+Markers
+Character
+
+** StackState **
+Empty
+Backside
+Frontside
+UnMapped
+Mapped
+Unclaimed
+Enemy
+Neutral
+Friendly
+Covert
+Quarantined
+Destroyed
+
+** GameLocation **
+
+
+GFStack
+id
+type
+location
+name
+points
+tags[]
+duration:GamePeriod
+turns:
+playLocations ??
+image:Image
+description:String
+hitPoints:Integer
+tacticalPoints:Integer
+attackPoints:Integer
+defensePoints:Integer
+commandPoints:Integer
+sciencePoints:Integer
+engineeringPoints:Integer
+diplomacyPoints:Integer
+
+
+GameCard
+id:Integer // unique identifier for a card in a game even if there are multiples.
+card:GFCard
+location: GFLocation
+index:Integer
+
+GFCard
+class GFCard {
+id:Integer
+key:String
+series:String
+copyrightDate:Date
+copyrightHolder:String
+
+}
+// info
+id:Integer; unique
+key:String; // unique character identifier for a card
+serial:Integer
+series:String
+copyrightDate:Date
+copyrightHolder:String
+
+// header
+type:enum
+name:String
+points:Integer
+tags:enum[]
+// note see what kind of tags are there
+
+// footer
+duration:GamePeriod
+destiny:Integer
+playLocations ??
+
+// visitor/location
+// characterTag, inhabitantsTag, badgesTag, natureTag, civilizationTag
+image:Image
+description:String
+hitPoints:Integer
+tacticalPoints:Integer
+attackPoints:Integer
+defensePoints:Integer
+
+commandPoints:Integer
+sciencePoints:Integer
+engineeringPoints:Integer
+diplomacyPoints:Integer
+
+// mission
+// levelTag
+description:String
+instructions:String
+complete:String
+fail:String
+duration
+
+
+// resource
+// resourceTag
+description:String
+instructions:String
+uses:GameUsage
+used:  cc
+depleted:String
+skillModifiers: Modifier[]
+attributeModifiers: Modifier[]
+tags: Tag[]
+
+// action
+//
+
+// event
+
+// marker
+
+Tags (text unless marked with * for icon)
+- Class -
+Visitor (*) 👽 EXTRATERRESTRIAL ALIEN Unicode: U+1F47D (U+D83D U+DC7D), UTF-8: F0 9F 91 BD
+Location (*) 🌅 SUNRISE Unicode: U+1F305 (U+D83C U+DF05), UTF-8: F0 9F 8C 85
+Resource (*) 🔩 NUT AND BOLT Unicode: U+1F529 (U+D83D U+DD29), UTF-8: F0 9F 94 A9
+Action (*) 📋 CLIPBOARD Unicode: U+1F4CB (U+D83D U+DCCB), UTF-8: F0 9F 93 8B
+Event (*) 🚨 POLICE CARS REVOLVING LIGHT Unicode: U+1F6A8 (U+D83D U+DEA8), UTF-8: F0 9F 9A A8
+Mission (*) 📁 FILE FOLDER Unicode: U+1F4C1 (U+D83D U+DCC1), UTF-8: F0 9F 93 81
+Marker (*) ✏️ PENCIL Unicode: U+270F U+FE0F, UTF-8: E2 9C 8F EF B8 8F
+
+- Visitor Tags -
+Ship (sentient/manmade) (*) 🚀 ROCKET Unicode: U+1F680 (U+D83D U+DE80), UTF-8: F0 9F 9A 80
+Probe (non-sentient/manmade) (*) 📡 SATELLITE ANTENNA Unicode: U+1F4E1 (U+D83D U+DCE1), UTF-8: F0 9F 93 A1
+Life-form (sentient/non-manmade) (*) 👾 ALIEN MONSTER Unicode: U+1F47E (U+D83D U+DC7E), UTF-8: F0 9F 91 BE
+Natural (non-sentient/non-manmade) (*) 🌠 SHOOTING STAR Unicode: U+1F320 (U+D83C U+DF20), UTF-8: F0 9F 8C A0
+
+🔶 LARGE ORANGE DIAMOND Unicode: U+1F536 (U+D83D U+DD36), UTF-8: F0 9F 94 B6
+
+- Location Tags - Only 1 on a card
+A-Z class systems ☀️ BLACK SUN WITH RAYS Unicode: U+2600 U+FE0F, UTF-8: E2 98 80 EF B8 8F
+Empty  🌌 MILKY WAY Unicode: U+1F30C (U+D83C U+DF0C), UTF-8: F0 9F 8C 8C
+Hazard ⚠️ WARNING SIGN Unicode: U+26A0 U+FE0F, UTF-8: E2 9A A0 EF B8 8F
+Antimatter Field
+Badlands
+Blck Hole
+Nebulae
+Nova
+Null Space
+Particle Fountain
+Quasar
+Spacial Rift
+Temporal Fold
+Wormhole
+
+- Mission Tags - Only 1 on a card
+Critical
+High
+Medium
+Low
+
+- Resource Tags - Only 1 on a card
+Crew (*) 👥 BUSTS IN SILHOUETTE Unicode: U+1F465 (U+D83D U+DC65), UTF-8: F0 9F 91 A5
+Passenger (*) 👤 BUST IN SILHOUETTE Unicode: U+1F464 (U+D83D U+DC64), UTF-8: F0 9F 91 A4
+Data (*) 📊 BAR CHART Unicode: U+1F4CA (U+D83D U+DCCA), UTF-8: F0 9F 93 8A
+Cargo (*) 📦 PACKAGE Unicode: U+1F4E6 (U+D83D U+DCE6), UTF-8: F0 9F 93 A6
+Upgrade (*) 🔌 ELECTRIC PLUG Unicode: U+1F50C (U+D83D U+DD0C), UTF-8: F0 9F 94 8C
+
+- Inhabitants Tags - Only 1 on a card
+AI
+Cal
+Criton
+Foreign
+Klaton
+Private
+Rylan
+Skalle
+Terran
+Theed
+Primitive (non-space faring)
+
+- Relationship Tags - 1 (not normally on locations, visitors)
+Friend (*) 😀 GRINNING FACE Unicode: U+1F600 (U+D83D U+DE00), UTF-8: F0 9F 98 80
+Neutral (*) 😐 NEUTRAL FACE Unicode: U+1F610 (U+D83D U+DE10), UTF-8: F0 9F 98 90
+Enemy (*) 😡 POUTING FACE Unicode: U+1F621 (U+D83D U+DE21), UTF-8: F0 9F 98 A1
+
+- Badges -
+IMN (*) 🚚 DELIVERY TRUCK Unicode: U+1F69A (U+D83D U+DE9A), UTF-8: F0 9F 9A 9A
+Pirate (*) 💀 SKULL Unicode: U+1F480 (U+D83D U+DC80), UTF-8: F0 9F 92 80
+Guard (*) 👮 POLICE OFFICER Unicode: U+1F46E (U+D83D U+DC6E), UTF-8: F0 9F 91 AE
+
+- Nature Tags -
+Anomaly (*) 🌀 CYCLONE Unicode: U+1F300 (U+D83C U+DF00), UTF-8: F0 9F 8C 80
+Mineral (*) 💎 GEM STONE Unicode: U+1F48E (U+D83D U+DC8E), UTF-8: F0 9F 92 8E
+Ecosphere (*) 🌼 BLOSSOM Unicode: U+1F33C (U+D83C U+DF3C), UTF-8: F0 9F 8C BC
+Biosphere (*) 🐴 HORSE FACE Unicode: U+1F434 (U+D83D U+DC34), UTF-8: F0 9F 90 B4
+
+- Civilization Tags -
+Commerce (*) 💰 MONEY BAG Unicode: U+1F4B0 (U+D83D U+DCB0), UTF-8: F0 9F 92 B0
+Religion (*) 🙏 PERSON WITH FOLDED HANDS Unicode: U+1F64F (U+D83D U+DE4F), UTF-8: F0 9F 99 8F
+Medical (*) 💊 PILL Unicode: U+1F48A (U+D83D U+DC8A), UTF-8: F0 9F 92 8A
+Repair (*) 🔧 WRENCH Unicode: U+1F527 (U+D83D U+DD27), UTF-8: F0 9F 94 A7
+Gamble (*) 🎲 GAME DIE Unicode: U+1F3B2 (U+D83C U+DFB2), UTF-8: F0 9F 8E B2
+Archeology (*) 🗿 MOYAI Unicode: U+1F5FF (U+D83D U+DDFF), UTF-8: F0 9F 97 BF
+Military (*) 🔫 PISTOL Unicode: U+1F52B (U+D83D U+DD2B), UTF-8: F0 9F 94 AB
+Base (*) 🏠 HOUSE BUILDING Unicode: U+1F3E0 (U+D83C U+DFE0), UTF-8: F0 9F 8F A0
+
+Supplies 🍴 FORK AND KNIFE Unicode: U+1F374 (U+D83C U+DF74), UTF-8: F0 9F 8D B4
+Materials
+Energy 🔋 BATTERY Unicode: U+1F50B (U+D83D U+DD0B), UTF-8: F0 9F 94 8B
+
+Example 1: Visitor
+{Icon of Visitor] IKE Blamoth 20
+Ship Terran Badge
+<Picture>
+Skills
+Rows of stats
+
+Example 2: System
+[Icon of System] New Deneb 20
+A-Class Theed [Up to 3 tags of badge, natural, civilization]
+<Picture>
+Skills
+Rows of stats 100, 80, 60, 40, 20 or 100, 75, 50, 25
+
+Stacks:
+Hand
+Deck
+Points
+Discard
+Visitor
+Location[10]
+
+import Foundation
+
+var error: NSError?
+let jsonData: NSData = /* get your json data */
+
+let jsonDict = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &error) as NSDictionary
