@@ -15,17 +15,20 @@
 		F064A1481BC9FFF500FBDFDF /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1411BC9FFF500FBDFDF /* Stack.swift */; settings = {ASSET_TAGS = (); }; };
 		F064A1491BC9FFF500FBDFDF /* StackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1421BC9FFF500FBDFDF /* StackState.swift */; settings = {ASSET_TAGS = (); }; };
 		F064A14A1BC9FFF500FBDFDF /* StackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1431BC9FFF500FBDFDF /* StackType.swift */; settings = {ASSET_TAGS = (); }; };
+		F064A1521BCA018600FBDFDF /* StreamScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1511BCA018600FBDFDF /* StreamScanner.swift */; settings = {ASSET_TAGS = (); }; };
+		F064A1531BCA040B00FBDFDF /* carddata.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = F064A1501BCA006000FBDFDF /* carddata.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		F064A1311BC9FFB200FBDFDF /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
 			files = (
+				F064A1531BCA040B00FBDFDF /* carddata.json in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -42,6 +45,7 @@
 		F064A14D1BCA002600FBDFDF /* GF Data.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GF Data.xlsx"; sourceTree = "<group>"; };
 		F064A14E1BCA002600FBDFDF /* GF Docs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GF Docs.txt"; sourceTree = "<group>"; };
 		F064A1501BCA006000FBDFDF /* carddata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = carddata.json; sourceTree = "<group>"; };
+		F064A1511BCA018600FBDFDF /* StreamScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamScanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 				F064A14C1BCA000E00FBDFDF /* utils */,
 				F064A1361BC9FFB200FBDFDF /* main.swift */,
 				F064A1501BCA006000FBDFDF /* carddata.json */,
+				F064A1511BCA018600FBDFDF /* StreamScanner.swift */,
 			);
 			path = gf;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F064A1371BC9FFB200FBDFDF /* main.swift in Sources */,
+				F064A1521BCA018600FBDFDF /* StreamScanner.swift in Sources */,
 				F064A1461BC9FFF500FBDFDF /* CardType.swift in Sources */,
 				F064A14A1BC9FFF500FBDFDF /* StackType.swift in Sources */,
 				F064A1441BC9FFF500FBDFDF /* Card.swift in Sources */,

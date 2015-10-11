@@ -8,5 +8,9 @@
 
 import Foundation
 
+let stdin = StreamScanner.standardInput
+
 print("Hello, World!")
 
+let filePath = NSBundle.mainBundle().pathForResource("carddata",ofType:"json")
+print(readFileInPath(filePath!)!)
