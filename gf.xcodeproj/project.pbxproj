@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0551A691BCA1798009F6F91 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0551A681BCA1798009F6F91 /* Strings.swift */; settings = {ASSET_TAGS = (); }; };
+		F0551A6D1BCA26B9009F6F91 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0551A6C1BCA26B9009F6F91 /* json.swift */; settings = {ASSET_TAGS = (); }; };
+		F0551A6F1BCA26E9009F6F91 /* swift-jason.md in Sources */ = {isa = PBXBuildFile; fileRef = F0551A6E1BCA26E9009F6F91 /* swift-jason.md */; settings = {ASSET_TAGS = (); }; };
 		F064A1371BC9FFB200FBDFDF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1361BC9FFB200FBDFDF /* main.swift */; };
 		F064A1441BC9FFF500FBDFDF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A13D1BC9FFF500FBDFDF /* Card.swift */; settings = {ASSET_TAGS = (); }; };
 		F064A1451BC9FFF500FBDFDF /* CardTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A13E1BC9FFF500FBDFDF /* CardTag.swift */; settings = {ASSET_TAGS = (); }; };
 		F064A1461BC9FFF500FBDFDF /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A13F1BC9FFF500FBDFDF /* CardType.swift */; settings = {ASSET_TAGS = (); }; };
-		F064A1471BC9FFF500FBDFDF /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1401BC9FFF500FBDFDF /* FileUtils.swift */; settings = {ASSET_TAGS = (); }; };
+		F064A1471BC9FFF500FBDFDF /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1401BC9FFF500FBDFDF /* Files.swift */; settings = {ASSET_TAGS = (); }; };
 		F064A1481BC9FFF500FBDFDF /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1411BC9FFF500FBDFDF /* Stack.swift */; settings = {ASSET_TAGS = (); }; };
 		F064A1491BC9FFF500FBDFDF /* StackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1421BC9FFF500FBDFDF /* StackState.swift */; settings = {ASSET_TAGS = (); }; };
 		F064A14A1BC9FFF500FBDFDF /* StackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1431BC9FFF500FBDFDF /* StackType.swift */; settings = {ASSET_TAGS = (); }; };
@@ -33,12 +36,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F0551A681BCA1798009F6F91 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		F0551A6C1BCA26B9009F6F91 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
+		F0551A6E1BCA26E9009F6F91 /* swift-jason.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "swift-jason.md"; sourceTree = "<group>"; };
 		F064A1331BC9FFB200FBDFDF /* gf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gf; sourceTree = BUILT_PRODUCTS_DIR; };
 		F064A1361BC9FFB200FBDFDF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F064A13D1BC9FFF500FBDFDF /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		F064A13E1BC9FFF500FBDFDF /* CardTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTag.swift; sourceTree = "<group>"; };
 		F064A13F1BC9FFF500FBDFDF /* CardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
-		F064A1401BC9FFF500FBDFDF /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
+		F064A1401BC9FFF500FBDFDF /* Files.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		F064A1411BC9FFF500FBDFDF /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		F064A1421BC9FFF500FBDFDF /* StackState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackState.swift; sourceTree = "<group>"; };
 		F064A1431BC9FFF500FBDFDF /* StackType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackType.swift; sourceTree = "<group>"; };
@@ -104,7 +110,9 @@
 		F064A14C1BCA000E00FBDFDF /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				F064A1401BC9FFF500FBDFDF /* FileUtils.swift */,
+				F064A1401BC9FFF500FBDFDF /* Files.swift */,
+				F0551A681BCA1798009F6F91 /* Strings.swift */,
+				F0551A6C1BCA26B9009F6F91 /* json.swift */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 		F064A14F1BCA002C00FBDFDF /* docs */ = {
 			isa = PBXGroup;
 			children = (
+				F0551A6E1BCA26E9009F6F91 /* swift-jason.md */,
 				F064A14D1BCA002600FBDFDF /* GF Data.xlsx */,
 				F064A14E1BCA002600FBDFDF /* GF Docs.txt */,
 			);
@@ -174,15 +183,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0551A6D1BCA26B9009F6F91 /* json.swift in Sources */,
 				F064A1371BC9FFB200FBDFDF /* main.swift in Sources */,
 				F064A1521BCA018600FBDFDF /* StreamScanner.swift in Sources */,
 				F064A1461BC9FFF500FBDFDF /* CardType.swift in Sources */,
 				F064A14A1BC9FFF500FBDFDF /* StackType.swift in Sources */,
+				F0551A691BCA1798009F6F91 /* Strings.swift in Sources */,
+				F0551A6F1BCA26E9009F6F91 /* swift-jason.md in Sources */,
 				F064A1441BC9FFF500FBDFDF /* Card.swift in Sources */,
 				F064A1451BC9FFF500FBDFDF /* CardTag.swift in Sources */,
 				F064A1481BC9FFF500FBDFDF /* Stack.swift in Sources */,
 				F064A1491BC9FFF500FBDFDF /* StackState.swift in Sources */,
-				F064A1471BC9FFF500FBDFDF /* FileUtils.swift in Sources */,
+				F064A1471BC9FFF500FBDFDF /* Files.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +312,7 @@
 				F064A13C1BC9FFB200FBDFDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

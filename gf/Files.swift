@@ -13,7 +13,7 @@ public func readFromDocumentsFile(fileName:String) -> String? {
     let path = documentsPath.stringByAppendingPathComponent(fileName)
     let checkValidation = NSFileManager.defaultManager()
     //    var error:NSError?
-//    var file:String
+    //    var file:String
     
     if checkValidation.fileExistsAtPath(path) {
         let location = NSString(string:"~/file.txt").stringByExpandingTildeInPath
@@ -24,8 +24,8 @@ public func readFromDocumentsFile(fileName:String) -> String? {
 }
 
 public func readJsonFile(filePath:String?) -> String? {
-//    let jsonData = NSData(contentsOfFile:filePath!)
-
+    //    let jsonData = NSData(contentsOfFile:filePath!)
+    
     return nil
 }
 
@@ -48,23 +48,22 @@ public func readFileInDocumentDirectory(file: String) -> String? {
 }
 
 public func readFileInPath(filePath: String) -> String? {
-    do {
-        let text = try NSString(contentsOfFile: filePath, encoding: NSUTF8StringEncoding)
-        
-        let returnText = text.stringByReplacingOccurrencesOfString("\n", withString: "")
-        return returnText
+    if NSFileManager.defaultManager().fileExistsAtPath(filePath) {
+        do {
+            //todo check path
+            
+            let text = try NSString(contentsOfFile: filePath, encoding: NSUTF8StringEncoding)
+            
+            return text as String
+        }
+        catch {/* error handling here */}
     }
-    catch {/* error handling here */}
     
     return nil
 }
 
 
 
-public func parseJsonData(data:String) throws -> NSDictionary  {
-    let jsonDict = try NSJSONSerialization.JSONObjectWithData(data.dataUsingEncoding(NSUTF8StringEncoding)!, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
-    return jsonDict
-}
 
 //let filePath = NSBundle.mainBundle().pathForResource("MyJSONFileName",ofType:"json")
 //// 2
