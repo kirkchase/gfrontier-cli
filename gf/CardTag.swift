@@ -30,7 +30,11 @@ public enum CardTag: String {
     case TemporalFold = "Temporal Fold"
     case Wormhole = "Wormhole"
     
-    public static func cardTagFromName(name:String) ->CardTag? {
-        return .Ship
-    }
+    
+//    public static func cardTagFromName(name:String) ->CardTag? {
+//        if (CardTag.Ship as String) == name {
+//            return .Ship
+//        }
+//        return .Ship
+//    }
 }

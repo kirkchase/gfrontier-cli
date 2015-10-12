@@ -1,5 +1,11 @@
-{"records":
+{"CardType":
     [
-    {"name":"kirk"}
+     {"id":"Visitor","name":"Visitor","symbol":"\uD83D\uDC7D"},
+     {"id":"Location","name":"Location","symbol":"\uD83C\uDF05"},
+     {"id":"Resource","name":"Resource","symbol":"\uD83D\uDD29"},
+     {"id":"Action","name":"Action","symbol":"\uD83D\uDCCB"},
+     {"id":"Event","name":"Event","symbol":"\uD83D\uDEA8"},
+     {"id":"Mission","name":"Mission","symbol":"\uD83D\uDCC1"},
+     {"id":"Marker","name":"Marker","symbol":"\u270F\uFE0F"}
     ]
 }

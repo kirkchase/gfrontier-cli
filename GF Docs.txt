@@ -224,7 +224,8 @@ Base (*) 🏠 HOUSE BUILDING Unicode: U+1F3E0 (U+D83C U+DFE0), UTF-8: F0 9F 8F A
 Supplies 🍴 FORK AND KNIFE Unicode: U+1F374 (U+D83C U+DF74), UTF-8: F0 9F 8D B4
 Materials
 Energy 🔋 BATTERY Unicode: U+1F50B (U+D83D U+DD0B), UTF-8: F0 9F 94 8B
-
+Covert ▪️ BLACK SMALL SQUARE
+Unicode: U+25AA U+FE0F, UTF-8: E2 96 AA EF B8 8F
 Example 1: Visitor
 {Icon of Visitor] IKE Blamoth 20
 Ship Terran Badge

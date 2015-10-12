@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F0551A691BCA1798009F6F91 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0551A681BCA1798009F6F91 /* Strings.swift */; settings = {ASSET_TAGS = (); }; };
 		F0551A6D1BCA26B9009F6F91 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0551A6C1BCA26B9009F6F91 /* json.swift */; settings = {ASSET_TAGS = (); }; };
-		F0551A6F1BCA26E9009F6F91 /* swift-jason.md in Sources */ = {isa = PBXBuildFile; fileRef = F0551A6E1BCA26E9009F6F91 /* swift-jason.md */; settings = {ASSET_TAGS = (); }; };
 		F064A1371BC9FFB200FBDFDF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1361BC9FFB200FBDFDF /* main.swift */; };
 		F064A1441BC9FFF500FBDFDF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A13D1BC9FFF500FBDFDF /* Card.swift */; settings = {ASSET_TAGS = (); }; };
 		F064A1451BC9FFF500FBDFDF /* CardTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A13E1BC9FFF500FBDFDF /* CardTag.swift */; settings = {ASSET_TAGS = (); }; };
@@ -189,7 +188,6 @@
 				F064A1461BC9FFF500FBDFDF /* CardType.swift in Sources */,
 				F064A14A1BC9FFF500FBDFDF /* StackType.swift in Sources */,
 				F0551A691BCA1798009F6F91 /* Strings.swift in Sources */,
-				F0551A6F1BCA26E9009F6F91 /* swift-jason.md in Sources */,
 				F064A1441BC9FFF500FBDFDF /* Card.swift in Sources */,
 				F064A1451BC9FFF500FBDFDF /* CardTag.swift in Sources */,
 				F064A1481BC9FFF500FBDFDF /* Stack.swift in Sources */,
