@@ -86,7 +86,6 @@ copyrightHolder:String
 type:enum
 name:String
 points:Integer
-tags:enum[]
 // note see what kind of tags are there
 
 // footer
@@ -96,11 +95,12 @@ playLocations ??
 
 // visitor/location
 // characterTag, inhabitantsTag, badgesTag, natureTag, civilizationTag
+baseTags
 image:Image
 description:String
 hitPoints:Integer
 tacticalPoints:Integer
-attackPoints:Integer
+attackPoints:Integer ?? or Damage Points
 defensePoints:Integer
 
 commandPoints:Integer

@@ -24,6 +24,7 @@ public class GFManager {
     
     // MARK: Methods
     public func load(data:JSON) {
+        // load constants
         if !data["CardTag"].isNull {
             tags.removeAll()
             for index in 0..<data["CardTag"].length {

@@ -9,7 +9,7 @@
 import Foundation
 
 public class CardDuration:LabelValue {
-    
+    // constants
 }
 
 public let Empty_CardDuration = CardDuration(key: "", name: "", short: "", value: 0)

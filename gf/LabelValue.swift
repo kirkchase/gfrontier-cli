@@ -21,29 +21,23 @@ public class LabelValue: Label {
         }
     }
     
-    public override var debugDescription: String {
-        return "\(short) \(name) (\(key)) = \(value)"
+    override public var jsonContents: String {
+        return super.jsonContents + ",\"value\":" + String(value)
     }
-    
-    public override var json: String {
-        return "{\"key\":\""
-            + key +
-            "\",\"name\":\"" +
-            name +
-            "\",\"short\":\"" +
-            short +
-            "\",\"value\":" +
-            String(value) + "}"
-    }
-    
+
     // MARK: Initializers
+    public required init() {
+        super.init()
+    }
+    
     public init(key:String, name:String, short:String, value:Int) {
         super.init(key: key, name: name, short: short)
         self.value = value
     }
     
-    convenience public init(data:JSON) {
-        self.init(key:data["key"].asString ?? "", name:data["name"].asString ?? "", short:data["short"].asString ?? "", value:data["name"].asInt ?? 0)
+    public required init(data:JSON) {
+        super.init(data: data)
+        self.value = data["name"].asInt ?? 0
     }
     
     

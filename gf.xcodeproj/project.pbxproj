@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F1916E21BCD568B005C14DB /* CardAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1916E11BCD568B005C14DB /* CardAttribute.swift */; settings = {ASSET_TAGS = (); }; };
+		7F1916E41BCDAFD4005C14DB /* JsonAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1916E31BCDAFD4005C14DB /* JsonAble.swift */; settings = {ASSET_TAGS = (); }; };
 		7F6DE70A1BCBF14F004DEEA7 /* CardDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE7091BCBF14F004DEEA7 /* CardDuration.swift */; settings = {ASSET_TAGS = (); }; };
 		7F6DE70C1BCC0BA5004DEEA7 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE70B1BCC0BA5004DEEA7 /* Label.swift */; settings = {ASSET_TAGS = (); }; };
 		7F6DE70E1BCC15F7004DEEA7 /* GFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE70D1BCC15F7004DEEA7 /* GFManager.swift */; settings = {ASSET_TAGS = (); }; };
@@ -41,6 +43,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F1916E11BCD568B005C14DB /* CardAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardAttribute.swift; sourceTree = "<group>"; };
+		7F1916E31BCDAFD4005C14DB /* JsonAble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonAble.swift; sourceTree = "<group>"; };
 		7F6DE7091BCBF14F004DEEA7 /* CardDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDuration.swift; sourceTree = "<group>"; };
 		7F6DE70B1BCC0BA5004DEEA7 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		7F6DE70D1BCC15F7004DEEA7 /* GFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GFManager.swift; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 				F064A13E1BC9FFF500FBDFDF /* CardTag.swift */,
 				F064A13F1BC9FFF500FBDFDF /* CardType.swift */,
 				7F76A6C91BCC5B6D0027CD6C /* CardAction.swift */,
+				7F1916E11BCD568B005C14DB /* CardAttribute.swift */,
 			);
 			name = cards;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 				7F76A6C81BCC391C0027CD6C /* stacks */,
 				7F6DE70B1BCC0BA5004DEEA7 /* Label.swift */,
 				7F76A6C51BCC2D090027CD6C /* LabelValue.swift */,
+				7F1916E31BCDAFD4005C14DB /* JsonAble.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -219,6 +225,7 @@
 				7F6DE70C1BCC0BA5004DEEA7 /* Label.swift in Sources */,
 				F0551A6D1BCA26B9009F6F91 /* json.swift in Sources */,
 				7F76A6CA1BCC5B6D0027CD6C /* CardAction.swift in Sources */,
+				7F1916E21BCD568B005C14DB /* CardAttribute.swift in Sources */,
 				F064A1371BC9FFB200FBDFDF /* main.swift in Sources */,
 				F064A1521BCA018600FBDFDF /* StreamScanner.swift in Sources */,
 				F064A1461BC9FFF500FBDFDF /* CardType.swift in Sources */,
@@ -231,6 +238,7 @@
 				F064A1451BC9FFF500FBDFDF /* CardTag.swift in Sources */,
 				F064A1481BC9FFF500FBDFDF /* Stack.swift in Sources */,
 				F064A1491BC9FFF500FBDFDF /* StackState.swift in Sources */,
+				7F1916E41BCDAFD4005C14DB /* JsonAble.swift in Sources */,
 				F064A1471BC9FFF500FBDFDF /* Files.swift in Sources */,
 				7F6DE70E1BCC15F7004DEEA7 /* GFManager.swift in Sources */,
 			);

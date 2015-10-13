@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Label: CustomStringConvertible, CustomDebugStringConvertible {
+public class Label: CustomStringConvertible, CustomDebugStringConvertible, JsonAble {
     // MARK: Properties
     var key = ""
     var name = ""
@@ -24,22 +24,43 @@ public class Label: CustomStringConvertible, CustomDebugStringConvertible {
     }
     
     public var debugDescription: String {
-        return "\(short) \(name) (\(key))"
+        return json
+    }
+    
+    public var jsonContents: String {
+        return "\"id\":\"" + key + "\",\"name\":\"" + name + "\",\"short\":\"" + short + "\""
     }
     
     public var json: String {
-        return "{\"id\":\"" + key + "\",\"name\":\"" + name + "\",\"short\":\"" + short + "\"}"
+        return "{\(jsonContents)}"
     }
+    
+    
 
     // MARK: Initializers
+    public required init() {
+    }
+    
     public init(key:String, name:String, short:String) {
         self.key = key
         self.name = name
         self.short = short
     }
     
-    convenience public init(data:JSON) {
-        self.init(key:data["key"].asString ?? "", name:data["name"].asString ?? "", short:data["short"].asString ?? "")
+    public required init(data:JSON) {
+        if let key = data["key"].asString {
+            self.key = key
+            if let name = data["name"].asString {
+                self.name = name
+            } else {
+                self.name = key
+            }
+            self.short = data["short"].asString ?? name
+        } else {
+            self.key = "ERROR"
+            self.name = data["name"].asString ?? ""
+            self.short = data["short"].asString ?? ""
+        }
     }
     
     // MARK: Methods

@@ -9,5 +9,7 @@
 import Foundation
 
 public class CardUsage:Label {
-    
+    // constants
 }
+
+public let Empty_CardUsage = CardUsage(key: "", name: "", short: "")
