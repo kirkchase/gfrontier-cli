@@ -3,7 +3,7 @@ import Foundation
 public class Stack: CustomStringConvertible, CustomDebugStringConvertible {
     var name: String
     var type: StackType
-    var state: StackState = .Empty
+    var state: StackState = StackState(key: "", name: "", short: "")
     var cards = [Card]()
     
     public init(name:String, type:StackType) {
@@ -29,10 +29,10 @@ public class Stack: CustomStringConvertible, CustomDebugStringConvertible {
         return _index(card, fromIndex: 0, compare: equalityByKey)
     }
     
-    public func index(type:CardType) -> Int? {
-        let card = Card(name: "test", type: type, key: "test")
-        return _index(card, fromIndex:0, compare: equalityByKind)
-    }
+//    public func index(type:CardType) -> Int? {
+//        let card = Card(name: "test", type: type, key: "test")
+//        return _index(card, fromIndex:0, compare: equalityByCardType)
+//    }
     
     public func _index(card:Card, fromIndex index:Int, compare: (Card, Card)->Bool) ->Int? {
         if validRange(index) {
@@ -61,8 +61,8 @@ public class Stack: CustomStringConvertible, CustomDebugStringConvertible {
         return $0.key == $1.key
     }
     
-    private let equalityByKind : (Card, Card) -> Bool = {
-        return $0.type == $1.type
+    private let equalityByCardType : (Card, Card) -> Bool = {
+        return $0.type.key == $1.type.key
     }
     
     public var description: String {

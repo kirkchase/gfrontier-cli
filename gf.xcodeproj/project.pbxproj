@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F6DE70A1BCBF14F004DEEA7 /* CardDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE7091BCBF14F004DEEA7 /* CardDuration.swift */; settings = {ASSET_TAGS = (); }; };
+		7F6DE70C1BCC0BA5004DEEA7 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE70B1BCC0BA5004DEEA7 /* Label.swift */; settings = {ASSET_TAGS = (); }; };
+		7F6DE70E1BCC15F7004DEEA7 /* GFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE70D1BCC15F7004DEEA7 /* GFManager.swift */; settings = {ASSET_TAGS = (); }; };
+		7F76A6C41BCC2BE70027CD6C /* CardUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76A6C31BCC2BE70027CD6C /* CardUsage.swift */; settings = {ASSET_TAGS = (); }; };
+		7F76A6C61BCC2D090027CD6C /* LabelValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76A6C51BCC2D090027CD6C /* LabelValue.swift */; settings = {ASSET_TAGS = (); }; };
+		7F76A6CA1BCC5B6D0027CD6C /* CardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76A6C91BCC5B6D0027CD6C /* CardAction.swift */; settings = {ASSET_TAGS = (); }; };
 		F0551A691BCA1798009F6F91 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0551A681BCA1798009F6F91 /* Strings.swift */; settings = {ASSET_TAGS = (); }; };
 		F0551A6D1BCA26B9009F6F91 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0551A6C1BCA26B9009F6F91 /* json.swift */; settings = {ASSET_TAGS = (); }; };
 		F064A1371BC9FFB200FBDFDF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1361BC9FFB200FBDFDF /* main.swift */; };
@@ -35,6 +41,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F6DE7091BCBF14F004DEEA7 /* CardDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDuration.swift; sourceTree = "<group>"; };
+		7F6DE70B1BCC0BA5004DEEA7 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		7F6DE70D1BCC15F7004DEEA7 /* GFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GFManager.swift; sourceTree = "<group>"; };
+		7F76A6C31BCC2BE70027CD6C /* CardUsage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardUsage.swift; sourceTree = "<group>"; };
+		7F76A6C51BCC2D090027CD6C /* LabelValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelValue.swift; sourceTree = "<group>"; };
+		7F76A6C91BCC5B6D0027CD6C /* CardAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardAction.swift; sourceTree = "<group>"; };
 		F0551A681BCA1798009F6F91 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F0551A6C1BCA26B9009F6F91 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 		F0551A6E1BCA26E9009F6F91 /* swift-jason.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "swift-jason.md"; sourceTree = "<group>"; };
@@ -64,6 +76,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F76A6C71BCC390C0027CD6C /* cards */ = {
+			isa = PBXGroup;
+			children = (
+				F064A13D1BC9FFF500FBDFDF /* Card.swift */,
+				7F6DE7091BCBF14F004DEEA7 /* CardDuration.swift */,
+				7F76A6C31BCC2BE70027CD6C /* CardUsage.swift */,
+				F064A13E1BC9FFF500FBDFDF /* CardTag.swift */,
+				F064A13F1BC9FFF500FBDFDF /* CardType.swift */,
+				7F76A6C91BCC5B6D0027CD6C /* CardAction.swift */,
+			);
+			name = cards;
+			sourceTree = "<group>";
+		};
+		7F76A6C81BCC391C0027CD6C /* stacks */ = {
+			isa = PBXGroup;
+			children = (
+				F064A1411BC9FFF500FBDFDF /* Stack.swift */,
+				F064A1421BC9FFF500FBDFDF /* StackState.swift */,
+				F064A1431BC9FFF500FBDFDF /* StackType.swift */,
+			);
+			name = stacks;
+			sourceTree = "<group>";
+		};
 		F064A12A1BC9FFB200FBDFDF = {
 			isa = PBXGroup;
 			children = (
@@ -88,7 +123,7 @@
 				F064A14C1BCA000E00FBDFDF /* utils */,
 				F064A1361BC9FFB200FBDFDF /* main.swift */,
 				F064A1501BCA006000FBDFDF /* carddata.json */,
-				F064A1511BCA018600FBDFDF /* StreamScanner.swift */,
+				7F6DE70D1BCC15F7004DEEA7 /* GFManager.swift */,
 			);
 			path = gf;
 			sourceTree = "<group>";
@@ -96,12 +131,10 @@
 		F064A14B1BCA000100FBDFDF /* models */ = {
 			isa = PBXGroup;
 			children = (
-				F064A13D1BC9FFF500FBDFDF /* Card.swift */,
-				F064A13E1BC9FFF500FBDFDF /* CardTag.swift */,
-				F064A13F1BC9FFF500FBDFDF /* CardType.swift */,
-				F064A1411BC9FFF500FBDFDF /* Stack.swift */,
-				F064A1421BC9FFF500FBDFDF /* StackState.swift */,
-				F064A1431BC9FFF500FBDFDF /* StackType.swift */,
+				7F76A6C71BCC390C0027CD6C /* cards */,
+				7F76A6C81BCC391C0027CD6C /* stacks */,
+				7F6DE70B1BCC0BA5004DEEA7 /* Label.swift */,
+				7F76A6C51BCC2D090027CD6C /* LabelValue.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -112,6 +145,7 @@
 				F064A1401BC9FFF500FBDFDF /* Files.swift */,
 				F0551A681BCA1798009F6F91 /* Strings.swift */,
 				F0551A6C1BCA26B9009F6F91 /* json.swift */,
+				F064A1511BCA018600FBDFDF /* StreamScanner.swift */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -182,17 +216,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F6DE70C1BCC0BA5004DEEA7 /* Label.swift in Sources */,
 				F0551A6D1BCA26B9009F6F91 /* json.swift in Sources */,
+				7F76A6CA1BCC5B6D0027CD6C /* CardAction.swift in Sources */,
 				F064A1371BC9FFB200FBDFDF /* main.swift in Sources */,
 				F064A1521BCA018600FBDFDF /* StreamScanner.swift in Sources */,
 				F064A1461BC9FFF500FBDFDF /* CardType.swift in Sources */,
+				7F76A6C41BCC2BE70027CD6C /* CardUsage.swift in Sources */,
 				F064A14A1BC9FFF500FBDFDF /* StackType.swift in Sources */,
+				7F6DE70A1BCBF14F004DEEA7 /* CardDuration.swift in Sources */,
+				7F76A6C61BCC2D090027CD6C /* LabelValue.swift in Sources */,
 				F0551A691BCA1798009F6F91 /* Strings.swift in Sources */,
 				F064A1441BC9FFF500FBDFDF /* Card.swift in Sources */,
 				F064A1451BC9FFF500FBDFDF /* CardTag.swift in Sources */,
 				F064A1481BC9FFF500FBDFDF /* Stack.swift in Sources */,
 				F064A1491BC9FFF500FBDFDF /* StackState.swift in Sources */,
 				F064A1471BC9FFF500FBDFDF /* Files.swift in Sources */,
+				7F6DE70E1BCC15F7004DEEA7 /* GFManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -157,6 +157,9 @@ Natural (non-sentient/non-manmade) (*) 🌠 SHOOTING STAR Unicode: U+1F320 (U+D8
 A-Z class systems ☀️ BLACK SUN WITH RAYS Unicode: U+2600 U+FE0F, UTF-8: E2 98 80 EF B8 8F
 Empty  🌌 MILKY WAY Unicode: U+1F30C (U+D83C U+DF0C), UTF-8: F0 9F 8C 8C
 Hazard ⚠️ WARNING SIGN Unicode: U+26A0 U+FE0F, UTF-8: E2 9A A0 EF B8 8F
+💣
+BOMB
+Unicode: U+1F4A3 (U+D83D U+DCA3), UTF-8: F0 9F 92 A3
 Antimatter Field
 Badlands
 Blck Hole
@@ -181,7 +184,10 @@ Passenger (*) 👤 BUST IN SILHOUETTE Unicode: U+1F464 (U+D83D U+DC64), UTF-8: F
 Data (*) 📊 BAR CHART Unicode: U+1F4CA (U+D83D U+DCCA), UTF-8: F0 9F 93 8A
 Cargo (*) 📦 PACKAGE Unicode: U+1F4E6 (U+D83D U+DCE6), UTF-8: F0 9F 93 A6
 Upgrade (*) 🔌 ELECTRIC PLUG Unicode: U+1F50C (U+D83D U+DD0C), UTF-8: F0 9F 94 8C
-
+Restricted (*) 🛃 CUSTOMS Unicode: U+1F6C3 (U+D83D U+DEC3), UTF-8: F0 9F 9B 83
+♨️
+HOT SPRINGS
+Unicode: U+2668 U+FE0F, UTF-8: E2 99 A8 EF B8 8F
 - Inhabitants Tags - Only 1 on a card
 AI
 Cal
