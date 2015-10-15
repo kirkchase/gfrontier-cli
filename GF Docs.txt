@@ -1,101 +1,51 @@
-Objects in game
-GameBoard
+# Objects in game
 
-Game Stack (parent)
-id: Int
-name: String
-type: Enum
-//not yet location: Enum
-state: Enum
-cards: [GameCard]()
+## Visitor/Character
+Type Name Points
+SubTypeTags
+------
+Image
+additionaltags
+Attr Action/Events Skills
+------
+turns placement destiny
+series copyright
 
-** StackType **
-Deck
-Selected
-Hand
-Points
-Discard
-Missions
-Events
-Markers
-Character
+## Mission/Action/Event
+------
+instructions
+Action/Events
+------
 
-** StackState **
-Empty
-Backside
-Frontside
-UnMapped
-Mapped
-Unclaimed
-Enemy
-Neutral
-Friendly
-Covert
-Quarantined
-Destroyed
-
-** GameLocation **
+## Resource
+------
+additionaltags
+attr
+skill
+Action/Event
 
 
-GFStack
-id
-type
-location
-name
-points
-tags[]
-duration:GamePeriod
-turns:
-playLocations ??
-image:Image
-description:String
-hitPoints:Integer
-tacticalPoints:Integer
-attackPoints:Integer
-defensePoints:Integer
-commandPoints:Integer
-sciencePoints:Integer
-engineeringPoints:Integer
-diplomacyPoints:Integer
-
-
-GameCard
-id:Integer // unique identifier for a card in a game even if there are multiples.
-card:GFCard
-location: GFLocation
-index:Integer
-
-GFCard
-class GFCard {
-id:Integer
-key:String
-series:String
-copyrightDate:Date
-copyrightHolder:String
-
-}
-// info
-id:Integer; unique
-key:String; // unique character identifier for a card
-serial:Integer
-series:String
-copyrightDate:Date
-copyrightHolder:String
-
+## GameCard
 // header
+key
 type:enum
 name:String
 points:Integer
 // note see what kind of tags are there
 
 // footer
+serial:Integer
+series:String
+copyrightDate:Date
+copyrightHolder:String
 duration:GamePeriod
+turns
 destiny:Integer
 playLocations ??
 
 // visitor/location
 // characterTag, inhabitantsTag, badgesTag, natureTag, civilizationTag
-baseTags
+cardTags
 image:Image
 description:String
 hitPoints:Integer
@@ -160,6 +110,31 @@ Hazard ⚠️ WARNING SIGN Unicode: U+26A0 U+FE0F, UTF-8: E2 9A A0 EF B8 8F
 💣
 BOMB
 Unicode: U+1F4A3 (U+D83D U+DCA3), UTF-8: F0 9F 92 A3
+▶︎F Weapon
+BLACK RIGHT-POINTING TRIANGLE
+Unicode: U+25B6 U+FE0E, UTF-8: E2 96 B6 EF B8 8E
+▷F
+WHITE RIGHT-POINTING TRIANGLE
+Unicode: U+25B7, UTF-8: E2 96 B7
+◆F
+BLACK DIAMOND
+Unicode: U+25C6, UTF-8: E2 97 86
+◇F
+WHITE DIAMOND
+Unicode: U+25C7, UTF-8: E2 97 87
+■F Event
+BLACK SQUARE
+Unicode: U+25A0, UTF-8: E2 96 A0
+□F
+WHITE SQUARE
+Unicode: U+25A1, UTF-8: E2 96 A1
+● Action Open
+BLACK CIRCLE
+Unicode: U+25CF, UTF-8: E2 97 8F
+○ Action Covert
+WHITE CIRCLE
+Unicode: U+25CB, UTF-8: E2 97 8B
+
 Antimatter Field
 Badlands
 Blck Hole
@@ -189,6 +164,9 @@ Restricted (*) 🛃 CUSTOMS Unicode: U+1F6C3 (U+D83D U+DEC3), UTF-8: F0 9F 9B 83
 HOT SPRINGS
 Unicode: U+2668 U+FE0F, UTF-8: E2 99 A8 EF B8 8F
 - Inhabitants Tags - Only 1 on a card
+Satellite
+Space Mines
+
 AI
 Cal
 Criton
@@ -227,6 +205,31 @@ Archeology (*) 🗿 MOYAI Unicode: U+1F5FF (U+D83D U+DDFF), UTF-8: F0 9F 97 BF
 Military (*) 🔫 PISTOL Unicode: U+1F52B (U+D83D U+DD2B), UTF-8: F0 9F 94 AB
 Base (*) 🏠 HOUSE BUILDING Unicode: U+1F3E0 (U+D83C U+DFE0), UTF-8: F0 9F 8F A0
 
+Deck 🎴 FLOWER PLAYING CARDS Unicode: U+1F3B4 (U+D83C U+DFB4), UTF-8: F0 9F 8E B4
+Hand ✋ RAISED HAND Unicode: U+270B, UTF-8: E2 9C 8B
+Points 👍
+THUMBS UP SIGN
+Unicode: U+1F44D (U+D83D U+DC4D), UTF-8: F0 9F 91 8D
+
+🏁 CHEQUERED FLAG Unicode: U+1F3C1 (U+D83C U+DFC1), UTF-8: F0 9F 8F 81
+Discard 👎
+THUMBS DOWN SIGN
+Unicode: U+1F44E (U+D83D U+DC4E), UTF-8: F0 9F 91 8E
+Location
+Visitor
+Mission
+Events
+♻️
+BLACK UNIVERSAL RECYCLING SYMBOL
+Unicode: U+267B U+FE0F, UTF-8: E2 99 BB EF B8 8F
+💧
+DROPLET
+Unicode: U+1F4A7 (U+D83D U+DCA7), UTF-8: F0 9F 92 A7
+⧯ Satellite
+ERROR-BARRED BLACK SQUARE
+Unicode: U+29EF, UTF-8: E2 A7 AF
+⧱ Space Mine ERROR-BARRED BLACK DIAMOND Unicode: U+29F1, UTF-8: E2 A7 B1
+
 Supplies 🍴 FORK AND KNIFE Unicode: U+1F374 (U+D83C U+DF74), UTF-8: F0 9F 8D B4
 Materials
 Energy 🔋 BATTERY Unicode: U+1F50B (U+D83D U+DD0B), UTF-8: F0 9F 94 8B
@@ -254,9 +257,67 @@ Discard
 Visitor
 Location[10]
 
-import Foundation
+GameBoard
 
-var error: NSError?
-let jsonData: NSData = /* get your json data */
+Game Stack (parent)
+id: Int
+name: String
+type: Enum
+//not yet location: Enum
+state: Enum
+cards: [GameCard]()
 
-let jsonDict = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &error) as NSDictionary
+** StackType **
+Deck
+Selected
+Hand
+Points
+Discard
+Missions
+Events
+Markers
+Character
+
+** StackState **
+Empty
+Backside
+Frontside
+UnMapped
+Mapped
+Unclaimed
+Enemy
+Neutral
+Friendly
+Covert
+Quarantined
+Destroyed
+
+** GameLocation **
+
+
+GFStack
+id
+type
+location
+name
+points
+tags[]
+duration:GamePeriod
+turns:
+playLocations ??
+image:Image
+description:String
+hitPoints:Integer
+tacticalPoints:Integer
+attackPoints:Integer
+defensePoints:Integer
+commandPoints:Integer
+sciencePoints:Integer
+engineeringPoints:Integer
+diplomacyPoints:Integer
+
+Placement
+
+😀
+☀️:!😡+(💰|🔫) // non enemy system with Commerce or Military
+

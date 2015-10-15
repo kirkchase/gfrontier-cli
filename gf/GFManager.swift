@@ -16,6 +16,7 @@ public class GFManager {
     var durations = [String: CardDuration]()
     var usages = [String: CardUsage]()
     var cardTypes = [String: CardType]()
+    var actionTypes = [String: CardActionType]()
     
     // MARK: Initializers
     public init() {
@@ -24,33 +25,54 @@ public class GFManager {
     
     // MARK: Methods
     public func load(data:JSON) {
-        // load constants
-        if !data["CardTag"].isNull {
+        if data.isError {
+            print("Parse error")
+            return
+        }
+        
+        loadConstants(data)
+        if !data["Card"].isNull {
+            for index in 0..<data["Card"].length {
+                let card = Card(data: data["Card"][index])
+                print(card)
+            }
+        }
+    }
+    
+    private func loadConstants(data:JSON) {
+       if !data["CardTag"].isNull {
             tags.removeAll()
-            for index in 0..<data["CardTag"].length {
-                let label = CardTag(data: data["CardTag"][index])
-                tags[label.key] = label
+            for index in 0..<data["CardTag"].asArray!.count {
+                let tag = CardTag(data: data["CardTag"][index])
+                tags[tag.key] = tag
             }
         }
         if !data["CardDuration"].isNull {
             durations.removeAll()
             for index in 0..<data["CardDuration"].length {
-                let label = CardDuration(data: data["CardDuration"][index])
-                durations[label.key] = label
+                let turns = CardDuration(data: data["CardDuration"][index])
+                durations[turns.key] = turns
             }
         }
         if !data["CardUsage"].isNull {
             usages.removeAll()
             for index in 0..<data["CardUsage"].length {
-                let label = CardUsage(data: data["CardUsage"][index])
-                usages[label.key] = label
+                let uses = CardUsage(data: data["CardUsage"][index])
+                usages[uses.key] = uses
             }
         }
         if !data["CardType"].isNull {
-            usages.removeAll()
+            cardTypes.removeAll()
             for index in 0..<data["CardType"].length {
-                let label = CardType(data: data["CardType"][index])
-                cardTypes[label.key] = label
+                let types = CardType(data: data["CardType"][index])
+                cardTypes[types.key] = types
+            }
+        }
+        if !data["CardActionType"].isNull {
+            actionTypes.removeAll()
+            for index in 0..<data["CardActionType"].length {
+                let types = CardActionType(data: data["CardActionType"][index])
+                actionTypes[types.key] = types
             }
         }
     }

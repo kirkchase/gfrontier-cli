@@ -11,6 +11,5 @@ import Foundation
 protocol JsonAble {
     var jsonContents: String { get }
     var json: String { get }
-    init()
     init(data:JSON)
 }

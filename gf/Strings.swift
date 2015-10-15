@@ -14,3 +14,9 @@ public func parseJsonData(data:String) -> NSDictionary?  {
     } catch {}
     return nil
 }
+
+extension String {
+    var length : Int {
+        return self.characters.count
+    }
+}

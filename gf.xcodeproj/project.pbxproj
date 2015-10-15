@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0805F51BD044FE00E53DB7 /* CardActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0805F41BD044FE00E53DB7 /* CardActionType.swift */; settings = {ASSET_TAGS = (); }; };
 		7F1916E21BCD568B005C14DB /* CardAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1916E11BCD568B005C14DB /* CardAttribute.swift */; settings = {ASSET_TAGS = (); }; };
 		7F1916E41BCDAFD4005C14DB /* JsonAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1916E31BCDAFD4005C14DB /* JsonAble.swift */; settings = {ASSET_TAGS = (); }; };
 		7F6DE70A1BCBF14F004DEEA7 /* CardDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE7091BCBF14F004DEEA7 /* CardDuration.swift */; settings = {ASSET_TAGS = (); }; };
@@ -43,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F0805F41BD044FE00E53DB7 /* CardActionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardActionType.swift; sourceTree = "<group>"; };
 		7F1916E11BCD568B005C14DB /* CardAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardAttribute.swift; sourceTree = "<group>"; };
 		7F1916E31BCDAFD4005C14DB /* JsonAble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonAble.swift; sourceTree = "<group>"; };
 		7F6DE7091BCBF14F004DEEA7 /* CardDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDuration.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				F064A13F1BC9FFF500FBDFDF /* CardType.swift */,
 				7F76A6C91BCC5B6D0027CD6C /* CardAction.swift */,
 				7F1916E11BCD568B005C14DB /* CardAttribute.swift */,
+				7F0805F41BD044FE00E53DB7 /* CardActionType.swift */,
 			);
 			name = cards;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				F064A1461BC9FFF500FBDFDF /* CardType.swift in Sources */,
 				7F76A6C41BCC2BE70027CD6C /* CardUsage.swift in Sources */,
 				F064A14A1BC9FFF500FBDFDF /* StackType.swift in Sources */,
+				7F0805F51BD044FE00E53DB7 /* CardActionType.swift in Sources */,
 				7F6DE70A1BCBF14F004DEEA7 /* CardDuration.swift in Sources */,
 				7F76A6C61BCC2D090027CD6C /* LabelValue.swift in Sources */,
 				F0551A691BCA1798009F6F91 /* Strings.swift in Sources */,

@@ -1,4 +1,9 @@
-{"CardTag":
+{
+    "Card":
+    [
+     {"key":"KryptonExpress", "type":"Visitor","name":"Baby K","points":0, "attributes":[12,12,12,12]}
+    ],
+    "CardTag":
     [
      {"key":"Ship","name":"Ship","short":"\uD83D\uDE80"},
      {"key":"Probe","name":"Probe","short":"\uD83D\uDCE1"},
@@ -68,16 +73,33 @@
      {"key":"Mineral","name":"Mineral","short":"\uD83D\uDC8E"},
      {"key":"Ecosphere","name":"Ecosphere","short":"\uD83C\uDF3C"},
      {"key":"Biosphere","name":"Biosphere","short":"\uD83D\uDC34"}
-    ],
+     ],
+    "CardActionType":
+    [
+     {"key":"ActionCovert","name":"Covert Action","short":"\u25CB"},
+     {"key":"ActionOpen","name":"Open Action","short":"\u25CF"},
+     {"key":"Step1Covert","name":"Covert Step 1","short":"\u2780"},
+     {"key":"Step2Covert","name":"Covert Step 2","short":"\u2781"},
+     {"key":"Step3Covert","name":"Covert Step 3","short":"\u2782"},
+     {"key":"Step4Covert","name":"Covert Step 4","short":"\u2783"},
+     {"key":"Step1Open","name":"Open Step 1","short":"\u278A"},
+     {"key":"Step2Open","name":"Open Step 2","short":"\u278B"},
+     {"key":"Step3Open","name":"Open Step 3","short":"\u278C"},
+     {"key":"Step4Open","name":"Open Step 4","short":"\u278D"},
+     {"key":"Weapon","name":"Weapon","short":"\u25B6\uFE0E"},
+     {"key":"DrawPhase","name":"Draw Phase","short":"\u25A0"},
+     {"key":"DiscardPhase","name":"Discard Phase","short":"\u25A0"}
+     ],
     "CardDuration":
     [
+     {"key":"Used","name":"When Used","short":"Used","value":-2},
      {"key":"Instant","name":"Instant","short":"Instant","value":-1},
      {"key":"Game","name":"Game","short":"Game","value":0},
      {"key":"1Turn","name":"1 Turn","short":"1","value":1},
      {"key":"2Turn","name":"2 Turns","short":"2","value":2},
      {"key":"3Turn","name":"3 Turns","short":"3","value":3},
-     {"key":"4Turn","name":"4 Turns","short":"4","value":4},
-    ],
+     {"key":"4Turn","name":"4 Turns","short":"4","value":4}
+     ],
     "CardUsage":
     [
      {"key":"Game","name":"Game","short":"Game","value":0},
@@ -95,7 +117,7 @@
      {"key":"Event","name":"Event","short":"\uD83D\uDEA8"},
      {"key":"Mission","name":"Mission","short":"\uD83D\uDCC1"},
      {"key":"Marker","name":"Marker","short":"\u270F\uFE0F"}
-    ],
+     ],
     "StackType":
     [
      {"key":"Deck","name":"Deck","short":"Deck"},
@@ -119,9 +141,5 @@
      {"key":"Friend","name":"Friend","short":"Friend"},
      {"key":"Locked","name":"Locked","short":"Locked"},
      {"key":"Destroyed","name":"Destroyed","short":"Destroyed"}
-    ],
-    "Card":
-    [
-     {"key":"", "type":"","name":"","points":0,}
-    ]
+     ]
 }
