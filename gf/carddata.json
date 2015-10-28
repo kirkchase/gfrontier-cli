@@ -1,7 +1,36 @@
 {
     "Card":
     [
-     {"key":"KryptonExpress", "type":"Visitor","name":"Baby K","points":0, "attributes":[12,12,12,12]}
+     {
+     "name": "Terran Cruiser",
+     "tags": [
+              "Ship",
+              "Terran"
+              ],
+     "actions": [
+                 {
+                 "attributes": {
+                 "ATT": 20,
+                 "DMG": 30
+                 },
+                 "type": "Weapon",
+                 "title": "Phasers 20/30"
+                 }
+                 ],
+     "points": 100,
+     "key": "TerranCruiser",
+     "attributes": {
+     "HIT": 12, 
+     "DMG": 0, 
+     "CMD": 3, 
+     "ENG": 5, 
+     "TAC": 12, 
+     "SCI": 2, 
+     "DIP": 5, 
+     "DEF": 12
+     }, 
+     "type": "Visitor"
+     }
     ],
     "CardTag":
     [
@@ -72,7 +101,9 @@
      {"key":"Anomaly","name":"Anomaly","short":"\uD83C\uDF00"},
      {"key":"Mineral","name":"Mineral","short":"\uD83D\uDC8E"},
      {"key":"Ecosphere","name":"Ecosphere","short":"\uD83C\uDF3C"},
-     {"key":"Biosphere","name":"Biosphere","short":"\uD83D\uDC34"}
+     {"key":"Biosphere","name":"Biosphere","short":"\uD83D\uDC34"},
+     {"key":"Satellite","name":"Satellite","short":"\u29EF"},
+     {"key":"SpaceMines","name":"Space Mines","short":"\u29F1"}
      ],
     "CardActionType":
     [
@@ -92,7 +123,7 @@
      ],
     "CardDuration":
     [
-     {"key":"Used","name":"When Used","short":"Used","value":-2},
+     {"key":"Used","name":"Until Used","short":"Used","value":-2},
      {"key":"Instant","name":"Instant","short":"Instant","value":-1},
      {"key":"Game","name":"Game","short":"Game","value":0},
      {"key":"1Turn","name":"1 Turn","short":"1","value":1},

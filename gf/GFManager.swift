@@ -34,7 +34,7 @@ public class GFManager {
         if !data["Card"].isNull {
             for index in 0..<data["Card"].length {
                 let card = Card(data: data["Card"][index])
-                print(card)
+                print(card.json)
             }
         }
     }

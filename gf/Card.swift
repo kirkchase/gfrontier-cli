@@ -13,8 +13,7 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
     var image = "" // Visitor, Location
     var instructions = "" // Mission, Action, Event, Resource, Marker
     var moreTags = [CardTag]() // Resource, Marker
-    var attributes = [String: CardAttribute]() // Resource, Marker
-    var skills = [CardAttribute]() // Resource, Marker
+    var attributes = [String: Int]() // Resource, Marker
     var actions = [CardAction]()
     
     
@@ -38,7 +37,39 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
     }
     
     public var jsonContents: String {
-        return ""
+        var working = jsonData("key", key)
+        working += jsonData("type", type.key)
+        working += jsonData("name", name)
+        working += jsonData("points", points)
+        working += jsonData("series", series)
+        working += jsonData("serial", serial)
+        working += jsonData("copyrightDate", copyrightDate.description)
+        working += jsonData("copyrightHolder", copyrightHolder)
+        working += jsonData("destiny", destiny)
+        working += jsonData("placement", placement)
+        working += jsonData("duration", duration.key)
+        working += jsonData("image", image)
+        working += jsonData("instructions", instructions)
+        if tags.count > 0 {
+            working += jsonTags("tags", tags)
+        }
+        if moreTags.count > 0 {
+            working += jsonTags("moreTags", moreTags)
+        }
+
+        working += jsonData("turns", turns, false)
+
+        return working
+    }
+    
+    private func jsonTags(key: String, _ tags:[CardTag]) -> String {
+        var working = "\"\(key)\":["
+        
+        for i in 0..<(tags.count - 1) {
+            working += tags[i].json + ","
+        }
+        working += tags[tags.count - 1].json + "]"
+        return working
     }
     
     public var json: String {
@@ -50,13 +81,6 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
     }
     
     public required init(data:JSON) {
-/*
-        
-        // center
-        var attributes = [CardAttribute]() // Resource, Marker
-        var skills = [CardAttribute]() // Resource, Marker
-        var actionEvents = [CardAction]()
-*/
         if let key = data["key"].asString {
             self.key = key
             self.type = GFManager.sharedInstance.cardTypes[data["type"].asString!] ?? Empty_CardType
@@ -83,19 +107,12 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
                 loadTags("moreTags", container:tags, data:data)
             }
 
-            // attributes
-            // skills
-            initAttributesSkills()
-            if listValid("attributes", data) {
-                let working = data["attributes"].asArray!
-                for i in 0..<working.count {
-                    let attribute = working[i].asInt!
-                    print(attribute)
-                }
+            if !data["attributes"].isError {
+                loadAttributes(data["attributes"])
             }
             // actions
             if listValid("actions", data) {
-                loadActions(data["actions"])
+                loadActions(data)
             }
             
         } else {
@@ -106,39 +123,36 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
     
     private func initAttributesSkills() {
         attributes.removeAll()
-        attributes["HP"] = 0;
-        attributes["DM"] = 0;
-        attributes["TC"] = 0;
-        attributes["DF"] = 0;
-        attributes["CM"] = 0;
-        attributes["DP"] = 0;
-        attributes["SC"] = 0;
-        attributes["EN"] = 0;
+        attributes["HIP"] = 0;
+        attributes["DMG"] = 0;
+        attributes["TAC"] = 0;
+        attributes["DEF"] = 0;
+        attributes["CMD"] = 0;
+        attributes["DIP"] = 0;
+        attributes["SCI"] = 0;
+        attributes["ENG"] = 0;
     }
     
     private func loadAttributes(data:JSON) {
-        let working = data["attributes"].asArray!
-        for i in 0..<working.count {
-            let attribute = working[i].asInt!
-            switch i {
-            case 1:
-                attributes["HP"] = attribute
-            case 2:
-                attributes["DM"] = attribute
-            case 3:
-                attributes["TC"] = attribute
-            case 4:
-                attributes["DF"] = attribute
-            default:
-                print("More attributes than expected");
-            }
+        loadConditionalAttribute("HIT", data)
+        loadConditionalAttribute("DMG", data)
+        loadConditionalAttribute("TAC", data)
+        loadConditionalAttribute("DEF", data)
+        loadConditionalAttribute("CMD", data)
+        loadConditionalAttribute("DIP", data)
+        loadConditionalAttribute("SCI", data)
+        loadConditionalAttribute("ENG", data)
+    }
+    
+    private func loadConditionalAttribute(key:String, _ data:JSON) {
+        if !data[key].isError {
+            attributes[key] = data[key].asInt!
         }
-        
     }
     
     private func loadActions(data:JSON) {
         actions.removeAll()
-        let working = data[key].asArray!
+        let working = data["actions"].asArray!
         for i in 0..<working.count {
             let action = CardAction(data:working[i])
             actions.append(action)

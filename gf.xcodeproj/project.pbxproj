@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0113361BD6979E0094F76A /* Menus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0113351BD6979E0094F76A /* Menus.swift */; settings = {ASSET_TAGS = (); }; };
 		7F0805F51BD044FE00E53DB7 /* CardActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0805F41BD044FE00E53DB7 /* CardActionType.swift */; settings = {ASSET_TAGS = (); }; };
 		7F1916E21BCD568B005C14DB /* CardAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1916E11BCD568B005C14DB /* CardAttribute.swift */; settings = {ASSET_TAGS = (); }; };
 		7F1916E41BCDAFD4005C14DB /* JsonAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1916E31BCDAFD4005C14DB /* JsonAble.swift */; settings = {ASSET_TAGS = (); }; };
@@ -44,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F0113351BD6979E0094F76A /* Menus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menus.swift; sourceTree = "<group>"; };
 		7F0805F41BD044FE00E53DB7 /* CardActionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardActionType.swift; sourceTree = "<group>"; };
 		7F1916E11BCD568B005C14DB /* CardAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardAttribute.swift; sourceTree = "<group>"; };
 		7F1916E31BCDAFD4005C14DB /* JsonAble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonAble.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				7F6DE70B1BCC0BA5004DEEA7 /* Label.swift */,
 				7F76A6C51BCC2D090027CD6C /* LabelValue.swift */,
 				7F1916E31BCDAFD4005C14DB /* JsonAble.swift */,
+				7F0113351BD6979E0094F76A /* Menus.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				F064A1451BC9FFF500FBDFDF /* CardTag.swift in Sources */,
 				F064A1481BC9FFF500FBDFDF /* Stack.swift in Sources */,
 				F064A1491BC9FFF500FBDFDF /* StackState.swift in Sources */,
+				7F0113361BD6979E0094F76A /* Menus.swift in Sources */,
 				7F1916E41BCDAFD4005C14DB /* JsonAble.swift in Sources */,
 				F064A1471BC9FFF500FBDFDF /* Files.swift in Sources */,
 				7F6DE70E1BCC15F7004DEEA7 /* GFManager.swift in Sources */,

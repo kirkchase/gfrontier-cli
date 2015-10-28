@@ -15,6 +15,17 @@ public func parseJsonData(data:String) -> NSDictionary?  {
     return nil
 }
 
+func jsonData(key:String, _ value:String, _ addComma:Bool = true) -> String {
+    if value.length == 0 {
+        return ""
+    }
+    return "\"" + key + "\":\"" + value + "\"" + (addComma ? "," : "")
+}
+
+func jsonData(key:String, _ value:Int, _ addComma:Bool = true) -> String {
+    return "\"" + key + "\":" + String(value) + (addComma ? "," : "")
+}
+
 extension String {
     var length : Int {
         return self.characters.count
