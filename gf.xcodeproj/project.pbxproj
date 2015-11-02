@@ -7,27 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F0113361BD6979E0094F76A /* Menus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0113351BD6979E0094F76A /* Menus.swift */; settings = {ASSET_TAGS = (); }; };
-		7F0805F51BD044FE00E53DB7 /* CardActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0805F41BD044FE00E53DB7 /* CardActionType.swift */; settings = {ASSET_TAGS = (); }; };
-		7F1916E21BCD568B005C14DB /* CardAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1916E11BCD568B005C14DB /* CardAttribute.swift */; settings = {ASSET_TAGS = (); }; };
-		7F1916E41BCDAFD4005C14DB /* JsonAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1916E31BCDAFD4005C14DB /* JsonAble.swift */; settings = {ASSET_TAGS = (); }; };
-		7F6DE70A1BCBF14F004DEEA7 /* CardDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE7091BCBF14F004DEEA7 /* CardDuration.swift */; settings = {ASSET_TAGS = (); }; };
-		7F6DE70C1BCC0BA5004DEEA7 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE70B1BCC0BA5004DEEA7 /* Label.swift */; settings = {ASSET_TAGS = (); }; };
-		7F6DE70E1BCC15F7004DEEA7 /* GFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE70D1BCC15F7004DEEA7 /* GFManager.swift */; settings = {ASSET_TAGS = (); }; };
-		7F76A6C41BCC2BE70027CD6C /* CardUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76A6C31BCC2BE70027CD6C /* CardUsage.swift */; settings = {ASSET_TAGS = (); }; };
-		7F76A6C61BCC2D090027CD6C /* LabelValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76A6C51BCC2D090027CD6C /* LabelValue.swift */; settings = {ASSET_TAGS = (); }; };
-		7F76A6CA1BCC5B6D0027CD6C /* CardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76A6C91BCC5B6D0027CD6C /* CardAction.swift */; settings = {ASSET_TAGS = (); }; };
-		F0551A691BCA1798009F6F91 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0551A681BCA1798009F6F91 /* Strings.swift */; settings = {ASSET_TAGS = (); }; };
-		F0551A6D1BCA26B9009F6F91 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0551A6C1BCA26B9009F6F91 /* json.swift */; settings = {ASSET_TAGS = (); }; };
+		7F0113361BD6979E0094F76A /* Menus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0113351BD6979E0094F76A /* Menus.swift */; };
+		7F0805F51BD044FE00E53DB7 /* CardActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0805F41BD044FE00E53DB7 /* CardActionType.swift */; };
+		7F1916E21BCD568B005C14DB /* CardAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1916E11BCD568B005C14DB /* CardAttribute.swift */; };
+		7F1916E41BCDAFD4005C14DB /* JsonAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1916E31BCDAFD4005C14DB /* JsonAble.swift */; };
+		7F6DE70A1BCBF14F004DEEA7 /* CardDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE7091BCBF14F004DEEA7 /* CardDuration.swift */; };
+		7F6DE70C1BCC0BA5004DEEA7 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE70B1BCC0BA5004DEEA7 /* Label.swift */; };
+		7F6DE70E1BCC15F7004DEEA7 /* GFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE70D1BCC15F7004DEEA7 /* GFManager.swift */; };
+		7F76A6C41BCC2BE70027CD6C /* CardUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76A6C31BCC2BE70027CD6C /* CardUsage.swift */; };
+		7F76A6C61BCC2D090027CD6C /* LabelValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76A6C51BCC2D090027CD6C /* LabelValue.swift */; };
+		7F76A6CA1BCC5B6D0027CD6C /* CardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76A6C91BCC5B6D0027CD6C /* CardAction.swift */; };
+		7F8AEAAD1BE11CC4006559A0 /* DisplayAllCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8AEAAC1BE11CC4006559A0 /* DisplayAllCards.swift */; };
+		F0551A691BCA1798009F6F91 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0551A681BCA1798009F6F91 /* Strings.swift */; };
+		F0551A6D1BCA26B9009F6F91 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0551A6C1BCA26B9009F6F91 /* json.swift */; };
 		F064A1371BC9FFB200FBDFDF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1361BC9FFB200FBDFDF /* main.swift */; };
-		F064A1441BC9FFF500FBDFDF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A13D1BC9FFF500FBDFDF /* Card.swift */; settings = {ASSET_TAGS = (); }; };
-		F064A1451BC9FFF500FBDFDF /* CardTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A13E1BC9FFF500FBDFDF /* CardTag.swift */; settings = {ASSET_TAGS = (); }; };
-		F064A1461BC9FFF500FBDFDF /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A13F1BC9FFF500FBDFDF /* CardType.swift */; settings = {ASSET_TAGS = (); }; };
-		F064A1471BC9FFF500FBDFDF /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1401BC9FFF500FBDFDF /* Files.swift */; settings = {ASSET_TAGS = (); }; };
-		F064A1481BC9FFF500FBDFDF /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1411BC9FFF500FBDFDF /* Stack.swift */; settings = {ASSET_TAGS = (); }; };
-		F064A1491BC9FFF500FBDFDF /* StackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1421BC9FFF500FBDFDF /* StackState.swift */; settings = {ASSET_TAGS = (); }; };
-		F064A14A1BC9FFF500FBDFDF /* StackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1431BC9FFF500FBDFDF /* StackType.swift */; settings = {ASSET_TAGS = (); }; };
-		F064A1521BCA018600FBDFDF /* StreamScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1511BCA018600FBDFDF /* StreamScanner.swift */; settings = {ASSET_TAGS = (); }; };
+		F064A1441BC9FFF500FBDFDF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A13D1BC9FFF500FBDFDF /* Card.swift */; };
+		F064A1451BC9FFF500FBDFDF /* CardTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A13E1BC9FFF500FBDFDF /* CardTag.swift */; };
+		F064A1461BC9FFF500FBDFDF /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A13F1BC9FFF500FBDFDF /* CardType.swift */; };
+		F064A1471BC9FFF500FBDFDF /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1401BC9FFF500FBDFDF /* Files.swift */; };
+		F064A1481BC9FFF500FBDFDF /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1411BC9FFF500FBDFDF /* Stack.swift */; };
+		F064A1491BC9FFF500FBDFDF /* StackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1421BC9FFF500FBDFDF /* StackState.swift */; };
+		F064A14A1BC9FFF500FBDFDF /* StackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1431BC9FFF500FBDFDF /* StackType.swift */; };
+		F064A1521BCA018600FBDFDF /* StreamScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1511BCA018600FBDFDF /* StreamScanner.swift */; };
 		F064A1531BCA040B00FBDFDF /* carddata.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = F064A1501BCA006000FBDFDF /* carddata.json */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +36,7 @@
 		F064A1311BC9FFB200FBDFDF /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
-			dstPath = "";
+			dstPath = gfdata;
 			dstSubfolderSpec = 7;
 			files = (
 				F064A1531BCA040B00FBDFDF /* carddata.json in CopyFiles */,
@@ -55,6 +56,8 @@
 		7F76A6C31BCC2BE70027CD6C /* CardUsage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardUsage.swift; sourceTree = "<group>"; };
 		7F76A6C51BCC2D090027CD6C /* LabelValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelValue.swift; sourceTree = "<group>"; };
 		7F76A6C91BCC5B6D0027CD6C /* CardAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardAction.swift; sourceTree = "<group>"; };
+		7F8AEAAC1BE11CC4006559A0 /* DisplayAllCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayAllCards.swift; sourceTree = "<group>"; };
+		7FDCC3531BE7F7E6008E1176 /* GF-TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GF-TODO"; sourceTree = "<group>"; };
 		F0551A681BCA1798009F6F91 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F0551A6C1BCA26B9009F6F91 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 		F0551A6E1BCA26E9009F6F91 /* swift-jason.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "swift-jason.md"; sourceTree = "<group>"; };
@@ -109,6 +112,15 @@
 			name = stacks;
 			sourceTree = "<group>";
 		};
+		7F8AEAAE1BE11CC9006559A0 /* Cli */ = {
+			isa = PBXGroup;
+			children = (
+				7F0113351BD6979E0094F76A /* Menus.swift */,
+				7F8AEAAC1BE11CC4006559A0 /* DisplayAllCards.swift */,
+			);
+			name = Cli;
+			sourceTree = "<group>";
+		};
 		F064A12A1BC9FFB200FBDFDF = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +146,7 @@
 				F064A1361BC9FFB200FBDFDF /* main.swift */,
 				F064A1501BCA006000FBDFDF /* carddata.json */,
 				7F6DE70D1BCC15F7004DEEA7 /* GFManager.swift */,
+				7F8AEAAE1BE11CC9006559A0 /* Cli */,
 			);
 			path = gf;
 			sourceTree = "<group>";
@@ -146,7 +159,6 @@
 				7F6DE70B1BCC0BA5004DEEA7 /* Label.swift */,
 				7F76A6C51BCC2D090027CD6C /* LabelValue.swift */,
 				7F1916E31BCDAFD4005C14DB /* JsonAble.swift */,
-				7F0113351BD6979E0094F76A /* Menus.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -168,6 +180,7 @@
 				F0551A6E1BCA26E9009F6F91 /* swift-jason.md */,
 				F064A14D1BCA002600FBDFDF /* GF Data.xlsx */,
 				F064A14E1BCA002600FBDFDF /* GF Docs.txt */,
+				7FDCC3531BE7F7E6008E1176 /* GF-TODO */,
 			);
 			name = docs;
 			sourceTree = "<group>";
@@ -248,6 +261,7 @@
 				7F0113361BD6979E0094F76A /* Menus.swift in Sources */,
 				7F1916E41BCDAFD4005C14DB /* JsonAble.swift in Sources */,
 				F064A1471BC9FFF500FBDFDF /* Files.swift in Sources */,
+				7F8AEAAD1BE11CC4006559A0 /* DisplayAllCards.swift in Sources */,
 				7F6DE70E1BCC15F7004DEEA7 /* GFManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

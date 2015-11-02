@@ -17,7 +17,7 @@
                  "title": "Phasers 20/30"
                  }
                  ],
-     "points": 100,
+     "points": 90,
      "key": "TerranCruiser",
      "attributes": {
      "HIT": 12, 
@@ -30,7 +30,8 @@
      "DEF": 12
      }, 
      "type": "Visitor"
-     }
+     },
+     {"key":"1Damage","name":"1-Damage","type":"Marking","series":"The Unknown","copyrightDate":2009,"copyrightHolder":"Kirk Chase","destiny":5,"image":null,"instructions":"Applies HIT-1 to character.","points":0}
     ],
     "CardTag":
     [

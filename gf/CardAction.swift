@@ -67,7 +67,7 @@ public class CardAction: CustomStringConvertible, CustomDebugStringConvertible, 
             working += "\"attributes\":["
             var i = 1;
             for attribute in attributes {
-                working + attribute.json
+                working += attribute.json
                 if i < attributes.count {
                     working += ","
                 }

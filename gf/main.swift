@@ -14,17 +14,20 @@ public var exitApp = false
 
 print("Galactic Frontier")
 print("\nInitializing data...\n")
-if let filePath = NSBundle.mainBundle().pathForResource("carddata",ofType:"json") {
+if let filePath = NSBundle.mainBundle().pathForResource("gfdata/carddata",ofType:"json") {
     var data = JSON.parse(condenseWhitespace(readFileInPath(filePath)!))
     GFManager.sharedInstance.load(data)
     
     repeat {
-        let action: String = getMainMenuAction();
+        let action: String = getMenuAction("*** GF Main Menu ***", actionMap: mainMenuMap);
         switch action  {
+            case "cards":
+                displayAllCards()
         case "quit":
-            exitApp = true;
+            exitApp = true
         default:
-            print("I am sorry, I don't understand \"\(action)\"")
+            print("I am sorry, \"\(action)\" is not implemented yet.")
+            exitApp = true
         }
     } while !exitApp
     

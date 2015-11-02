@@ -17,6 +17,7 @@ public class GFManager {
     var usages = [String: CardUsage]()
     var cardTypes = [String: CardType]()
     var actionTypes = [String: CardActionType]()
+    public var cardTemplates = [String: Card]()
     
     // MARK: Initializers
     public init() {
@@ -34,7 +35,7 @@ public class GFManager {
         if !data["Card"].isNull {
             for index in 0..<data["Card"].length {
                 let card = Card(data: data["Card"][index])
-                print(card.json)
+                cardTemplates[card.key] = card
             }
         }
     }
