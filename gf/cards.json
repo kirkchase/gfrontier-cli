@@ -1,0 +1,36 @@
+{
+"Card":
+[
+ {
+ "name": "Terran Cruiser",
+ "tags": [
+          "Ship",
+          "Terran"
+          ],
+ "actions": [
+             {
+             "attributes": {
+             "ATT": 20,
+             "DMG": 30
+             },
+             "type": "Weapon",
+             "title": "Phasers 20/30"
+             }
+             ],
+ "points": 90,
+ "key": "TerranCruiser",
+ "attributes": {
+ "HIT": 12,
+ "DMG": 0,
+ "CMD": 3,
+ "ENG": 5,
+ "TAC": 12,
+ "SCI": 2,
+ "DIP": 5,
+ "DEF": 12
+ },
+ "type": "Visitor"
+ },
+ {"key":"1Damage","name":"1-Damage","type":"Marker","series":"The Unknown","copyrightDate":2009,"copyrightHolder":"Kirk Chase","destiny":5,"image":null,"instructions":"Applies HIT-1 to character.","points":0}
+ ]
+}

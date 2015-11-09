@@ -321,5 +321,5 @@ diplomacyPoints:Integer
 Placement
 
 😀
-☀️:!😡+(💰|🔫) // non enemy system with Commerce or Military
+☀️(😀😐)(💰🔫) // non enemy system with Commerce or Military
 

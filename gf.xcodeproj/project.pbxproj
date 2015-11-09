@@ -18,6 +18,8 @@
 		7F76A6C61BCC2D090027CD6C /* LabelValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76A6C51BCC2D090027CD6C /* LabelValue.swift */; };
 		7F76A6CA1BCC5B6D0027CD6C /* CardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76A6C91BCC5B6D0027CD6C /* CardAction.swift */; };
 		7F8AEAAD1BE11CC4006559A0 /* DisplayAllCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8AEAAC1BE11CC4006559A0 /* DisplayAllCards.swift */; };
+		7FDCC3561BEA8180008E1176 /* cards.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FDCC3551BEA816D008E1176 /* cards.json */; };
+		7FF636EA1BEEC6EB00DD3CFB /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF636E91BEEC6EB00DD3CFB /* Menu.swift */; };
 		F0551A691BCA1798009F6F91 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0551A681BCA1798009F6F91 /* Strings.swift */; };
 		F0551A6D1BCA26B9009F6F91 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0551A6C1BCA26B9009F6F91 /* json.swift */; };
 		F064A1371BC9FFB200FBDFDF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1361BC9FFB200FBDFDF /* main.swift */; };
@@ -39,6 +41,7 @@
 			dstPath = gfdata;
 			dstSubfolderSpec = 7;
 			files = (
+				7FDCC3561BEA8180008E1176 /* cards.json in CopyFiles */,
 				F064A1531BCA040B00FBDFDF /* carddata.json in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,11 +61,13 @@
 		7F76A6C91BCC5B6D0027CD6C /* CardAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardAction.swift; sourceTree = "<group>"; };
 		7F8AEAAC1BE11CC4006559A0 /* DisplayAllCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayAllCards.swift; sourceTree = "<group>"; };
 		7FDCC3531BE7F7E6008E1176 /* GF-TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GF-TODO"; sourceTree = "<group>"; };
+		7FDCC3551BEA816D008E1176 /* cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
+		7FF636E91BEEC6EB00DD3CFB /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		F0551A681BCA1798009F6F91 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F0551A6C1BCA26B9009F6F91 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 		F0551A6E1BCA26E9009F6F91 /* swift-jason.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "swift-jason.md"; sourceTree = "<group>"; };
 		F064A1331BC9FFB200FBDFDF /* gf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gf; sourceTree = BUILT_PRODUCTS_DIR; };
-		F064A1361BC9FFB200FBDFDF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F064A1361BC9FFB200FBDFDF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = main.swift; path = gf/main.swift; sourceTree = "<group>"; };
 		F064A13D1BC9FFF500FBDFDF /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		F064A13E1BC9FFF500FBDFDF /* CardTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTag.swift; sourceTree = "<group>"; };
 		F064A13F1BC9FFF500FBDFDF /* CardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
@@ -117,8 +122,19 @@
 			children = (
 				7F0113351BD6979E0094F76A /* Menus.swift */,
 				7F8AEAAC1BE11CC4006559A0 /* DisplayAllCards.swift */,
+				7FF636E91BEEC6EB00DD3CFB /* Menu.swift */,
 			);
 			name = Cli;
+			path = gf;
+			sourceTree = "<group>";
+		};
+		7FDCC3541BEA6340008E1176 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				F064A1501BCA006000FBDFDF /* carddata.json */,
+				7FDCC3551BEA816D008E1176 /* cards.json */,
+			);
+			name = data;
 			sourceTree = "<group>";
 		};
 		F064A12A1BC9FFB200FBDFDF = {
@@ -126,6 +142,8 @@
 			children = (
 				F064A14F1BCA002C00FBDFDF /* docs */,
 				F064A1351BC9FFB200FBDFDF /* gf */,
+				7F8AEAAE1BE11CC9006559A0 /* Cli */,
+				F064A1361BC9FFB200FBDFDF /* main.swift */,
 				F064A1341BC9FFB200FBDFDF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,10 +161,8 @@
 			children = (
 				F064A14B1BCA000100FBDFDF /* models */,
 				F064A14C1BCA000E00FBDFDF /* utils */,
-				F064A1361BC9FFB200FBDFDF /* main.swift */,
-				F064A1501BCA006000FBDFDF /* carddata.json */,
+				7FDCC3541BEA6340008E1176 /* data */,
 				7F6DE70D1BCC15F7004DEEA7 /* GFManager.swift */,
-				7F8AEAAE1BE11CC9006559A0 /* Cli */,
 			);
 			path = gf;
 			sourceTree = "<group>";
@@ -255,6 +271,7 @@
 				7F76A6C61BCC2D090027CD6C /* LabelValue.swift in Sources */,
 				F0551A691BCA1798009F6F91 /* Strings.swift in Sources */,
 				F064A1441BC9FFF500FBDFDF /* Card.swift in Sources */,
+				7FF636EA1BEEC6EB00DD3CFB /* Menu.swift in Sources */,
 				F064A1451BC9FFF500FBDFDF /* CardTag.swift in Sources */,
 				F064A1481BC9FFF500FBDFDF /* Stack.swift in Sources */,
 				F064A1491BC9FFF500FBDFDF /* StackState.swift in Sources */,

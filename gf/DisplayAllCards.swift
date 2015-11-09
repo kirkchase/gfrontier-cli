@@ -2,52 +2,41 @@ import Foundation
 
 private let CARD_GROUPING = 5
 
-private let displayMenuMap: [(key:String, value:String)] = [
-    ("all", "All"),
-    ("locations", "Locations"),
-    ("visitors", "Visitors"),
-    ("resources", "Resources"),
-    ("missions", "Missions"),
-    ("events", "Events"),
-    ("actions", "Actions"),
-    ("markers", "Markers"),
-    ("cancel", "Cancel")
+private let displayMenuMap: [(title:String, payload:Any?, action: (_: Any?) -> String?)] = [
+    ("All", nil, dislplayCards),
+    ("Locations", GFManager.sharedInstance.cardTypes["Location"], dislplayCards),
+    ("Visitors", GFManager.sharedInstance.cardTypes["Visitor"], dislplayCards),
+    ("Resources", GFManager.sharedInstance.cardTypes["Resource"], dislplayCards),
+    ("Missions", GFManager.sharedInstance.cardTypes["Mission"], dislplayCards),
+    ("Events", GFManager.sharedInstance.cardTypes["Event"], dislplayCards),
+    ("Actions", GFManager.sharedInstance.cardTypes["Action"], dislplayCards),
+    ("Markers", GFManager.sharedInstance.cardTypes["Marker"], dislplayCards),
+    ("Cancel", nil, cancelMenu)
 ]
 
+private func dislplayCards(parameter: Any?) -> String? {
+//    let cardType = GFManager.sharedInstance.cardTypes[name]
+//    let cards = getCardsByType(cardType)
+//    
+//    return name;
+    return nil;
+}
 
-public func displayAllCards() {
-    var finished = false;
-    //    var errors = false;
-    
-    var cards = [Card]()
+private func cancelMenu(parameter: Any?) -> String? {
+    finished = true;
+    return "cancel"
+}
+
+private var finished = false;
+
+public func displayAllCards(parameter: Any?) -> String? {
     
     repeat {
-        let action: String = getMenuAction("** Display Cards **", actionMap: displayMenuMap);
-        switch action {
-        case "all":
-            cards = getCardsByType(nil)
-        case "locations":
-            cards = getCardsByType(GFManager.sharedInstance.cardTypes["Location"])
-        case "visitors":
-            cards = getCardsByType(GFManager.sharedInstance.cardTypes["Visitor"])
-        case "resources":
-            cards = getCardsByType(GFManager.sharedInstance.cardTypes["Resource"])
-        case "missions":
-            cards = getCardsByType(GFManager.sharedInstance.cardTypes["Mission"])
-        case "events":
-            cards = getCardsByType(GFManager.sharedInstance.cardTypes["Event"])
-        case "actions":
-            cards = getCardsByType(GFManager.sharedInstance.cardTypes["Action"])
-        case "markers":
-            cards = getCardsByType(GFManager.sharedInstance.cardTypes["Marker"])
-        case "cancel":
-            finished = true
-        default:
-            print("I am sorry, \"\(action)\" is not implemented yet.")
-            finished = true
-        }
-        
-    } while !finished
+//    var cards = [Card]()
+    
+//    let action: String = getMenuAction("** Display Cards **", actionMap: displayMenuMap);
+   } while !finished
+    //
     //    print("All Cards")
     //
     //    var count = 0
@@ -66,18 +55,20 @@ public func displayAllCards() {
     //        print(fi)
     //        print("**********")
     //    }
-    
+    return "aal"
 }
 
 private func getCardsByType(type: CardType?) -> [Card] {
     var cards = [Card]()
     
     if let type = type {
-            for card in GFManager.sharedInstance.cardTemplates.values {
-                if card.type.key == type.key {
-                    cards.append(card)
-                }
+        for card in GFManager.sharedInstance.cardTemplates.values {
+            if card.type.key == type.key {
+                cards.append(card)
             }
+        }
+    } else {
+        cards.appendContentsOf(GFManager.sharedInstance.cardTemplates.values)
     }
     
     return cards

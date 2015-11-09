@@ -10,8 +10,8 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
     var tags = [CardTag]()
     
     // center
-    var image = "" // Visitor, Location
-    var instructions = "" // Mission, Action, Event, Resource, Marker
+    var image:String? = nil // Visitor, Location
+    var instructions:String? = nil // Mission, Action, Event, Resource, Marker
     var moreTags = [CardTag]() // Resource, Marker
     var attributes = [String: Int]() // Resource, Marker
     var actions = [CardAction]()
@@ -23,9 +23,9 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
     var copyrightDate = NSDate()
     var copyrightHolder = "Kirk Chase"
     var destiny = 0;
-    var placement = ""
-    var duration = Empty_CardDuration
-    var turns = 0
+    var placement:String?
+    var duration:CardDuration? = nil
+    var turns:CardUsage? = nil
     
     // MARK: Computed Properties
     public var description: String {
@@ -43,21 +43,33 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
         working += jsonData("points", points)
         working += jsonData("series", series)
         working += jsonData("serial", serial)
-        working += jsonData("copyrightDate", copyrightDate.description)
-        working += jsonData("copyrightHolder", copyrightHolder)
         working += jsonData("destiny", destiny)
-        working += jsonData("placement", placement)
-        working += jsonData("duration", duration.key)
-        working += jsonData("image", image)
-        working += jsonData("instructions", instructions)
+        if let placement = placement {
+            working += jsonData("placement", placement)
+        }
+        if let duration = duration {
+            working += jsonData("duration", duration.key)
+        }
+        if let image = image {
+            working += jsonData("image", image)
+        }
+        if let instructions = instructions {
+            working += jsonData("instructions", instructions)
+        }
+        
         if tags.count > 0 {
             working += jsonTags("tags", tags)
         }
         if moreTags.count > 0 {
             working += jsonTags("moreTags", moreTags)
         }
-
-        working += jsonData("turns", turns, false)
+        if let turns = turns {
+            working += jsonData("turns", turns.key)
+        }
+        
+        // need to end on an always so that it has no comma
+        working += jsonData("copyrightDate", copyrightDate.description)
+        working += jsonData("copyrightHolder", copyrightHolder, false)
 
         return working
     }
@@ -66,9 +78,9 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
         var working = "\"\(key)\":["
         
         for i in 0..<(tags.count - 1) {
-            working += tags[i].json + ","
+            working += tags[i].key + ","
         }
-        working += tags[tags.count - 1].json + "]"
+        working += tags[tags.count - 1].key + "]"
         return working
     }
     
@@ -93,7 +105,7 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
             self.destiny = data["destiny"].asInt ?? 0
             self.placement = data["placement"].asString ?? ""
             self.duration = GFManager.sharedInstance.durations[data["duration"].asString ?? "Game"] ?? GFManager.sharedInstance.durations["Game"]!
-            self.turns = data["turns"].asInt ?? 0
+//            self.turns = data["turns"].asInt ?? 0
             
             // tags
             if listValid("tags", data) {
