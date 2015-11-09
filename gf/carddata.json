@@ -72,7 +72,7 @@
      {"key":"Ecosphere","name":"Ecosphere","short":"\uD83C\uDF3C"},
      {"key":"Biosphere","name":"Biosphere","short":"\uD83D\uDC34"},
      {"key":"Satellite","name":"Satellite","short":"\u29EF"},
-     {"key":"SpaceMines","name":"Space Mines","short":"\u29F1"}
+     {"key":"SpaceMines","name":"Space Mines","short":"\u29F1"},
      {"key":"Damage","name":"Damage","short":"\u1F4A5"}
      ],
     "CardActionType":
@@ -118,29 +118,5 @@
      {"key":"Event","name":"Event","short":"\uD83D\uDEA8"},
      {"key":"Mission","name":"Mission","short":"\uD83D\uDCC1"},
      {"key":"Marker","name":"Marker","short":"\u270F\uFE0F"}
-     ],
-    "StackType":
-    [
-     {"key":"Deck","name":"Deck","short":"Deck"},
-     {"key":"Points","name":"Points Pile","short":"Points"},
-     {"key":"Discard","name":"Discard Pile","short":"Discard"},
-     {"key":"Hand","name":"Hand","short":"Hand"},
-     {"key":"Selected","name":"Selected Cards","short":"Selected"},
-     {"key":"Missions","name":"Missions Pile","short":"Mission"},
-     {"key":"Events","name":"Events","short":"Events"},
-     {"key":"Character","name":"Character","short":"Character"}
-     ],
-    "StackState":
-    [
-     {"key":"Empty","name":"Empty","short":"Empty"},
-     {"key":"Back","name":"Back","short":"Back"},
-     {"key":"Front","name":"Front","short":"Front"},
-     {"key":"Unmapped","name":"Unmapped","short":"Unmapped"},
-     {"key":"Mapped","name":"Mapped","short":"Mapped"},
-     {"key":"Enemy","name":"Enemy","short":"Enemy"},
-     {"key":"Neutral","name":"Neutral","short":"Neutral"},
-     {"key":"Friend","name":"Friend","short":"Friend"},
-     {"key":"Locked","name":"Locked","short":"Locked"},
-     {"key":"Destroyed","name":"Destroyed","short":"Destroyed"}
      ]
 }

@@ -17,9 +17,11 @@
 		7F76A6C41BCC2BE70027CD6C /* CardUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76A6C31BCC2BE70027CD6C /* CardUsage.swift */; };
 		7F76A6C61BCC2D090027CD6C /* LabelValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76A6C51BCC2D090027CD6C /* LabelValue.swift */; };
 		7F76A6CA1BCC5B6D0027CD6C /* CardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76A6C91BCC5B6D0027CD6C /* CardAction.swift */; };
-		7F8AEAAD1BE11CC4006559A0 /* DisplayAllCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8AEAAC1BE11CC4006559A0 /* DisplayAllCards.swift */; };
+		7F8AEAAD1BE11CC4006559A0 /* DisplayCardTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8AEAAC1BE11CC4006559A0 /* DisplayCardTemplates.swift */; };
 		7FDCC3561BEA8180008E1176 /* cards.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FDCC3551BEA816D008E1176 /* cards.json */; };
 		7FF636EA1BEEC6EB00DD3CFB /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF636E91BEEC6EB00DD3CFB /* Menu.swift */; };
+		7FF636EC1BF0F8D400DD3CFB /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF636EB1BF0F8D400DD3CFB /* MainMenu.swift */; };
+		7FF636EF1BF13DD700DD3CFB /* DisplayConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF636EE1BF13DD700DD3CFB /* DisplayConstants.swift */; };
 		F0551A691BCA1798009F6F91 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0551A681BCA1798009F6F91 /* Strings.swift */; };
 		F0551A6D1BCA26B9009F6F91 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0551A6C1BCA26B9009F6F91 /* json.swift */; };
 		F064A1371BC9FFB200FBDFDF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1361BC9FFB200FBDFDF /* main.swift */; };
@@ -59,10 +61,12 @@
 		7F76A6C31BCC2BE70027CD6C /* CardUsage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardUsage.swift; sourceTree = "<group>"; };
 		7F76A6C51BCC2D090027CD6C /* LabelValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelValue.swift; sourceTree = "<group>"; };
 		7F76A6C91BCC5B6D0027CD6C /* CardAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardAction.swift; sourceTree = "<group>"; };
-		7F8AEAAC1BE11CC4006559A0 /* DisplayAllCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayAllCards.swift; sourceTree = "<group>"; };
+		7F8AEAAC1BE11CC4006559A0 /* DisplayCardTemplates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayCardTemplates.swift; sourceTree = "<group>"; };
 		7FDCC3531BE7F7E6008E1176 /* GF-TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GF-TODO"; sourceTree = "<group>"; };
 		7FDCC3551BEA816D008E1176 /* cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		7FF636E91BEEC6EB00DD3CFB /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		7FF636EB1BF0F8D400DD3CFB /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		7FF636EE1BF13DD700DD3CFB /* DisplayConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayConstants.swift; sourceTree = "<group>"; };
 		F0551A681BCA1798009F6F91 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F0551A6C1BCA26B9009F6F91 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 		F0551A6E1BCA26E9009F6F91 /* swift-jason.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "swift-jason.md"; sourceTree = "<group>"; };
@@ -120,8 +124,8 @@
 		7F8AEAAE1BE11CC9006559A0 /* Cli */ = {
 			isa = PBXGroup;
 			children = (
+				7FF636ED1BF1327600DD3CFB /* actions */,
 				7F0113351BD6979E0094F76A /* Menus.swift */,
-				7F8AEAAC1BE11CC4006559A0 /* DisplayAllCards.swift */,
 				7FF636E91BEEC6EB00DD3CFB /* Menu.swift */,
 			);
 			name = Cli;
@@ -135,6 +139,16 @@
 				7FDCC3551BEA816D008E1176 /* cards.json */,
 			);
 			name = data;
+			sourceTree = "<group>";
+		};
+		7FF636ED1BF1327600DD3CFB /* actions */ = {
+			isa = PBXGroup;
+			children = (
+				7F8AEAAC1BE11CC4006559A0 /* DisplayCardTemplates.swift */,
+				7FF636EB1BF0F8D400DD3CFB /* MainMenu.swift */,
+				7FF636EE1BF13DD700DD3CFB /* DisplayConstants.swift */,
+			);
+			name = actions;
 			sourceTree = "<group>";
 		};
 		F064A12A1BC9FFB200FBDFDF = {
@@ -271,14 +285,16 @@
 				7F76A6C61BCC2D090027CD6C /* LabelValue.swift in Sources */,
 				F0551A691BCA1798009F6F91 /* Strings.swift in Sources */,
 				F064A1441BC9FFF500FBDFDF /* Card.swift in Sources */,
+				7FF636EF1BF13DD700DD3CFB /* DisplayConstants.swift in Sources */,
 				7FF636EA1BEEC6EB00DD3CFB /* Menu.swift in Sources */,
 				F064A1451BC9FFF500FBDFDF /* CardTag.swift in Sources */,
 				F064A1481BC9FFF500FBDFDF /* Stack.swift in Sources */,
 				F064A1491BC9FFF500FBDFDF /* StackState.swift in Sources */,
 				7F0113361BD6979E0094F76A /* Menus.swift in Sources */,
+				7FF636EC1BF0F8D400DD3CFB /* MainMenu.swift in Sources */,
 				7F1916E41BCDAFD4005C14DB /* JsonAble.swift in Sources */,
 				F064A1471BC9FFF500FBDFDF /* Files.swift in Sources */,
-				7F8AEAAD1BE11CC4006559A0 /* DisplayAllCards.swift in Sources */,
+				7F8AEAAD1BE11CC4006559A0 /* DisplayCardTemplates.swift in Sources */,
 				7F6DE70E1BCC15F7004DEEA7 /* GFManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

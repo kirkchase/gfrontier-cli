@@ -29,13 +29,13 @@ private func cancelMenu(parameter: Any?) -> String? {
 
 private var finished = false;
 
-public func displayAllCards(parameter: Any?) -> String? {
+public func displayCardTemplates(parameter: Any?) -> String? {
     
-    repeat {
+//    repeat {
 //    var cards = [Card]()
     
 //    let action: String = getMenuAction("** Display Cards **", actionMap: displayMenuMap);
-   } while !finished
+//   } while !finished
     //
     //    print("All Cards")
     //

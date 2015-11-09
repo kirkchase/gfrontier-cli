@@ -1,74 +1,42 @@
 import Foundation
 
-public let mainMenuMap: [(title:String, payload:Any?, action: (_: Any?) -> String?)] = [
-    ("View cards", nil, displayAllCards),
-//    ("constants", "Constants - View constants (types, tags, etc.)"),
-    ("Quit", nil, returnNil)
-]
-
-
-public func getMenuAction(title:String, actionMap:[(key:String, value:String, action: (_:String))], prompt:String = "Option #: ") -> String {
-    print("\n\(title)")
-    var count = 1
-    for (_, value, action) in actionMap {
-        print(" \(count). \(value)")
-        count++
-    }
-    print("")
-    return getMenuAction(prompt, actionMap)
+public func doMenuSelection(title:String,
+    menuItems:[(title:String, payload:Any?, action: (_:Any?) -> String?)],
+    prompt:String = "Option #: ") -> Int {
+        print("\n\(title)")
+        var count = 1
+        for (title, _, _) in menuItems {
+            print(" \(count). \(title)")
+            count++
+        }
+        print("")
+        return getSelectedIndex(prompt, menuItems.count)
 }
 
-public func pause(prompt:String = ">>>", blanks:Bool = false) {
-    if blanks {
-        print("\n")
-    }
-    print(prompt, terminator:"")
-    if blanks {
-        print("\n")
-    }
-}
-
-private func getMenuAction(prompt:String, _ menus:[(key:String, value:String, action:(_:String))]) -> String {
-    var action = "";
+private func getSelectedIndex(prompt:String, _ count:Int) -> Int {
     repeat {
         print(prompt, terminator:"")
-         //stdin.read()
-        if let item:String = readLine() {
-            action = item.lowercaseString
-            
-            if let command = isAction(action, menus) {
-                return command
+        
+        let index = stdin.read() as Int?
+        
+        
+        if let index = index {
+            if index > 0 && index <= count {
+                return index - 1;
             }
+        } else {
+            print("** Invalid Input ** Enter a number between 1-\(count)")
         }
     } while true
 }
 
-private func isAction(search:String, _ menus:[(key:String, value:String, action:(_:String))]) -> String? {
-    for i in 0..<menus.count {
-        let action = menus[i]
 
-        if search == String(i + 1) {
-            return action.key
-        } else if search == action.key.lowercaseString {
-            return action.key
-        }
-    }
+public func pauseit() {
+    print("\n")
     
-    return nil
-}
-
-private let myMenu: [Menu] = [Menu("Something", returnTitle), Menu("Quit", returnNil)]
-
-public func mainDoMenu() {
-    print("Heelo")
-    var count = 1
-    for menu in myMenu{
-        print("\(count). \(menu.title)")
-        count++
-    }
-    let index : Int? = stdin.read()
+    print("Press Return to continue> ", terminator:"")
+    let _ = stdin.read() as String?
     
-    if let index = index {
-        var action: String? = myMenu[index].action
-    }
+    print("\n")
+    
 }

@@ -32,7 +32,7 @@ public class GFManager {
         }
         
         loadConstants(data)
-        if !data["Card"].isNull {
+        if !data["Card"].isError {
             for index in 0..<data["Card"].length {
                 let card = Card(data: data["Card"][index])
                 cardTemplates[card.key] = card
@@ -41,36 +41,31 @@ public class GFManager {
     }
     
     private func loadConstants(data:JSON) {
-       if !data["CardTag"].isNull {
-            tags.removeAll()
+       if !data["CardTag"].isError {
             for index in 0..<data["CardTag"].asArray!.count {
                 let tag = CardTag(data: data["CardTag"][index])
                 tags[tag.key] = tag
             }
         }
-        if !data["CardDuration"].isNull {
-            durations.removeAll()
+        if !data["CardDuration"].isError {
             for index in 0..<data["CardDuration"].length {
                 let turns = CardDuration(data: data["CardDuration"][index])
                 durations[turns.key] = turns
             }
         }
-        if !data["CardUsage"].isNull {
-            usages.removeAll()
+        if !data["CardUsage"].isError {
             for index in 0..<data["CardUsage"].length {
                 let uses = CardUsage(data: data["CardUsage"][index])
                 usages[uses.key] = uses
             }
         }
-        if !data["CardType"].isNull {
-            cardTypes.removeAll()
+        if !data["CardType"].isError {
             for index in 0..<data["CardType"].length {
                 let types = CardType(data: data["CardType"][index])
                 cardTypes[types.key] = types
             }
         }
-        if !data["CardActionType"].isNull {
-            actionTypes.removeAll()
+        if !data["CardActionType"].isError {
             for index in 0..<data["CardActionType"].length {
                 let types = CardActionType(data: data["CardActionType"][index])
                 actionTypes[types.key] = types
