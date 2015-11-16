@@ -19,7 +19,7 @@ public class Label: CustomStringConvertible, CustomDebugStringConvertible, JsonA
         if (name == short) {
             return "\(name)"
         } else {
-            return "\(short) \(name)"
+            return "\(name) (\(short))"
         }
     }
     

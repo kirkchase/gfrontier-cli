@@ -17,7 +17,7 @@ public class LabelValue: Label {
         if (name == short) {
             return "\(name) = \(value)"
         } else {
-            return "\(short) \(name) = \(value)"
+            return "\(name) (\(short)) = \(value)"
         }
     }
     

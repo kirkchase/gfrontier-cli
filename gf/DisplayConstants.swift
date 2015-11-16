@@ -1,28 +1,111 @@
 import Foundation
 
 private let topLevelMenu: [(title:String, payload:Any?, action: (_: Any?) -> String?)] = [
-    ("CardTags", GFManager.sharedInstance.tags, displayTags),
-    ("CardActionTypes", nil, returnNil),
-    ("CardDurations", nil, returnNil),
-    ("CardTypes", nil, returnNil),
-    //    ("constants", "Constants - View constants (types, tags, etc.)"),
+    ("CardTags", nil, displayTags),
+    ("CardActionTypes", nil, displayCardActionTypes),
+    ("CardDurations", nil, displayCardDurations),
+    ("CardTypes", nil, displayCardTypes),
     ("Cancel", "cancel", returnNil)
 ]
 
 
 public func displayConstantsMenu(parameter: Any?) -> String? {
-    let index = doMenuSelection("** Display Game Constants **", menuItems: topLevelMenu)
+    var exitMenu = false
+    repeat {
+        let index = doMenuSelection("** Display Game Constants **", menuItems: topLevelMenu)
+        let result = topLevelMenu[index].action(topLevelMenu[index].payload)
+        if result == nil {
+            exitMenu = true
+        }
+    } while exitMenu == false
     
-    topLevelMenu[index].action(topLevelMenu[index].payload)
-    return "constants"
+    return "displayConstantsMenu"
 }
 
 private func displayTags(payload:Any?) -> String? {
     print("")
     print("*** Card Tags **")
+    var count = 1
+    var items = [CardTag]();
     for (_, tag) in GFManager.sharedInstance.tags {
-        print(tag.description)
+        items.append(tag)
+
+    }
+    items.sortInPlace {$0.key < $1.key}
+    for tag in items {
+        print("\(count). \(tag.description)")
+        if (count % 10) == 0 {
+            pauseit()
+        }
+        count++;
+        
     }
     pauseit();
-    return "foo"
+    return "back"
+}
+
+private func displayCardActionTypes(payload:Any?) -> String? {
+    print("")
+    print("*** Card Action Types **")
+    var count = 1
+    var items = [CardActionType]();
+    for (_, action) in GFManager.sharedInstance.actionTypes {
+        items.append(action)
+        
+    }
+    items.sortInPlace {$0.key < $1.key}
+    for action in items {
+        print("\(count). \(action.description)")
+        if (count % 10) == 0 {
+            pauseit()
+        }
+        count++;
+        
+    }
+    pauseit();
+    return "back"
+}
+
+private func displayCardDurations(payload:Any?) -> String? {
+    print("")
+    print("*** Card Durations **")
+    var count = 1
+    var items = [CardDuration]();
+    for (_, action) in GFManager.sharedInstance.durations {
+        items.append(action)
+        
+    }
+    items.sortInPlace {$0.key < $1.key}
+    for action in items {
+        print("\(count). \(action.description)")
+        if (count % 10) == 0 {
+            pauseit()
+        }
+        count++;
+        
+    }
+    pauseit();
+    return "back"
+}
+
+private func displayCardTypes(payload:Any?) -> String? {
+    print("")
+    print("*** Card Types **")
+    var count = 1
+    var items = [CardType]();
+    for (_, action) in GFManager.sharedInstance.cardTypes {
+        items.append(action)
+        
+    }
+    items.sortInPlace {$0.key < $1.key}
+    for action in items {
+        print("\(count). \(action.description)")
+        if (count % 10) == 0 {
+            pauseit()
+        }
+        count++;
+        
+    }
+    pauseit();
+    return "back"
 }

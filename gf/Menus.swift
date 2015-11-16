@@ -32,11 +32,6 @@ private func getSelectedIndex(prompt:String, _ count:Int) -> Int {
 
 
 public func pauseit() {
-    print("\n")
-    
-    print("Press Return to continue> ", terminator:"")
+    print("< Press Return to continue > ", terminator:"")
     let _ = stdin.read() as String?
-    
-    print("\n")
-    
 }

@@ -22,10 +22,12 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
     var serial = 0
     var copyrightDate = NSDate()
     var copyrightHolder = "Kirk Chase"
-    var destiny = 0;
+    var destiny = 0
     var placement:String?
     var duration:CardDuration? = nil
-    var turns:CardUsage? = nil
+    var turns = 0
+    var usages:CardUsage? = nil
+    var uses = 0
     
     // MARK: Computed Properties
     public var description: String {
@@ -63,10 +65,7 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
         if moreTags.count > 0 {
             working += jsonTags("moreTags", moreTags)
         }
-        if let turns = turns {
-            working += jsonData("turns", turns.key)
-        }
-        
+1
         // need to end on an always so that it has no comma
         working += jsonData("copyrightDate", copyrightDate.description)
         working += jsonData("copyrightHolder", copyrightHolder, false)

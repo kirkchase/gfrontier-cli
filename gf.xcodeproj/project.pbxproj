@@ -33,7 +33,7 @@
 		F064A1491BC9FFF500FBDFDF /* StackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1421BC9FFF500FBDFDF /* StackState.swift */; };
 		F064A14A1BC9FFF500FBDFDF /* StackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1431BC9FFF500FBDFDF /* StackType.swift */; };
 		F064A1521BCA018600FBDFDF /* StreamScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064A1511BCA018600FBDFDF /* StreamScanner.swift */; };
-		F064A1531BCA040B00FBDFDF /* carddata.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = F064A1501BCA006000FBDFDF /* carddata.json */; };
+		F064A1531BCA040B00FBDFDF /*  carddata.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = F064A1501BCA006000FBDFDF /*  carddata.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,7 +44,7 @@
 			dstSubfolderSpec = 7;
 			files = (
 				7FDCC3561BEA8180008E1176 /* cards.json in CopyFiles */,
-				F064A1531BCA040B00FBDFDF /* carddata.json in CopyFiles */,
+				F064A1531BCA040B00FBDFDF /*  carddata.json in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +81,7 @@
 		F064A1431BC9FFF500FBDFDF /* StackType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackType.swift; sourceTree = "<group>"; };
 		F064A14D1BCA002600FBDFDF /* GF Data.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GF Data.xlsx"; sourceTree = "<group>"; };
 		F064A14E1BCA002600FBDFDF /* GF Docs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GF Docs.txt"; sourceTree = "<group>"; };
-		F064A1501BCA006000FBDFDF /* carddata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = carddata.json; sourceTree = "<group>"; };
+		F064A1501BCA006000FBDFDF /*  carddata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = " carddata.json"; sourceTree = "<group>"; };
 		F064A1511BCA018600FBDFDF /* StreamScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamScanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,7 +135,7 @@
 		7FDCC3541BEA6340008E1176 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				F064A1501BCA006000FBDFDF /* carddata.json */,
+				F064A1501BCA006000FBDFDF /*  carddata.json */,
 				7FDCC3551BEA816D008E1176 /* cards.json */,
 			);
 			name = data;
