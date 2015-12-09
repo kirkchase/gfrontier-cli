@@ -14,15 +14,22 @@ public var exitApp = false
 public var gameError : String? = nil
 
 print("Galactic Frontier")
-print("Initializing data...")
 if let filePath = NSBundle.mainBundle().pathForResource("gfdata/carddata",ofType:"json") {
+    print("Initializing data...")
     var data = JSON.parse(condenseWhitespace(readFileInPath(filePath)!))
     GFManager.sharedInstance.load(data)
 }
-print("Loading cards...")
-if let filePath = NSBundle.mainBundle().pathForResource("gfdata/cards",ofType:"json"), let error = gameError {
+
+//TODO need to load in images
+
+if let filePath = NSBundle.mainBundle().pathForResource("gfdata/cards",ofType:"json") {
+    print("Loading cards...")
     var data = JSON.parse(condenseWhitespace(readFileInPath(filePath)!))
     GFManager.sharedInstance.load(data)
+}
+if let error = gameError {
+    print("** Error ** \(error)")
+    exit(EXIT_FAILURE)
 }
 
 repeat {
@@ -34,9 +41,5 @@ repeat {
 
 } while !exitApp && gameError != nil
 
-if let error = gameError {
-    print("** Error ** \(error)")
-    exit(EXIT_FAILURE)
-}
 
 exit(EXIT_SUCCESS)

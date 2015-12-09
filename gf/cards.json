@@ -1,6 +1,7 @@
 {
 "Card":
     [
-
-    ]
+     {"key":"1Damage","name":"1-Damage","type":"Marker","points":0,"instructions":"Apply 1 DMG to character.","attributes":[{"DMG":1}],"tags":[],"moreTags":["Damage"],"actions":[]},
+     {"key":"HMSGalihad","name":"HMS Galihad","type":"Visitor","points":7,"image":"HMSGalihad.gif","attributes":[{"HIT":25},{"TAC":2},{"DEF":6},{"CMD":6},{"DIP":6},{"SCI":4},{"ENG":3}],"tags":["Ship","Klaton"],"moreTags":[],"actions":[{"type":"Weapon","title":"Beam","instructions":"DMG=STR","range":"Character","turnwide":false,"activated":false},{"type":"Weapon","title":"Missile","instructions":"DMG=5","range":"Character","turnwide":false,"activated":false},]}
+     ]
 }

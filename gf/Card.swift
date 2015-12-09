@@ -25,9 +25,7 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
     var destiny = 0
     var placement:String?
     var duration:CardDuration? = nil
-    var turns = 0
     var usages:CardUsage? = nil
-    var uses = 0
     
     // MARK: Computed Properties
     public var description: String {
@@ -94,37 +92,37 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
     public required init(data:JSON) {
         if let key = data["key"].asString {
             self.key = key
-            self.type = GFManager.sharedInstance.cardTypes[data["type"].asString!] ?? Empty_CardType
+            self.type = GFManager.sharedInstance.cardTypes[data["type"].asString ?? "Resource"] ?? CardType(key: "Unknown CardType", name: "Unknown Cardype", short: data["type"].asString!)
             self.name = data["name"].asString!
             self.points = data["points"].asInt ?? 0
-            self.series = data["series"].asString ?? "The Unknown"
-            self.serial = data["serial"].asInt ?? 0
-            self.copyrightDate = data["copyrightDate"].asDate ?? NSDate()
-            self.copyrightHolder = data["copyrightHolder"].asString ?? "Kirk Chase"
-            self.destiny = data["destiny"].asInt ?? 0
-            self.placement = data["placement"].asString ?? ""
-            self.duration = GFManager.sharedInstance.durations[data["duration"].asString ?? "Game"] ?? GFManager.sharedInstance.durations["Game"]!
+//            self.series = data["series"].asString ?? "The Unknown"
+//            self.serial = data["serial"].asInt ?? 0
+//            self.copyrightDate = data["copyrightDate"].asDate ?? NSDate()
+//            self.copyrightHolder = data["copyrightHolder"].asString ?? "Kirk Chase"
+//            self.destiny = data["destiny"].asInt ?? 0
+//            self.placement = data["placement"].asString ?? ""
+//            self.duration = GFManager.sharedInstance.durations[data["duration"].asString ?? "Game"] ?? GFManager.sharedInstance.durations["Game"]!
 //            self.turns = data["turns"].asInt ?? 0
             
             // tags
-            if listValid("tags", data) {
-                loadTags("tags", container:tags, data:data)
-            }
+//            if listValid("tags", data) {
+//                loadTags("tags", container:tags, data:data)
+//            }
             self.image = data["image"].asString ?? ""
             self.instructions = data["instructions"].asString ?? ""
 
             // moreTags
-            if listValid("moreTags", data) {
-                loadTags("moreTags", container:tags, data:data)
-            }
-
+//            if listValid("moreTags", data) {
+//                loadTags("moreTags", container:tags, data:data)
+//            }
+//
             if !data["attributes"].isError {
                 loadAttributes(data["attributes"])
             }
             // actions
-            if listValid("actions", data) {
-                loadActions(data)
-            }
+//            if listValid("actions", data) {
+//                loadActions(data)
+//            }
             
         } else {
             self.key = "ERROR"
@@ -134,6 +132,8 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
     
     private func initAttributesSkills() {
         attributes.removeAll()
+        attributes["TUR"] = 0;
+        attributes["USE"] = 0;
         attributes["HIP"] = 0;
         attributes["DMG"] = 0;
         attributes["TAC"] = 0;
@@ -145,6 +145,8 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
     }
     
     private func loadAttributes(data:JSON) {
+        loadConditionalAttribute("TUR", data)
+        loadConditionalAttribute("USE", data)
         loadConditionalAttribute("HIT", data)
         loadConditionalAttribute("DMG", data)
         loadConditionalAttribute("TAC", data)

@@ -15,6 +15,7 @@ public class GFManager {
     var tags = [String: CardTag]()
     var durations = [String: CardDuration]()
     var usages = [String: CardUsage]()
+    var effectRanges = [String: EffectRange]()
     var cardTypes = [String: CardType]()
     var actionTypes = [String: CardActionType]()
     public var cardTemplates = [String: Card]()
@@ -57,6 +58,12 @@ public class GFManager {
             for index in 0..<data["CardUsage"].length {
                 let uses = CardUsage(data: data["CardUsage"][index])
                 usages[uses.key] = uses
+            }
+        }
+        if !data["EffectRange"].isError {
+            for index in 0..<data["EffectRange"].length {
+                let uses = EffectRange(data: data["EffectRange"][index])
+                effectRanges[uses.key] = uses
             }
         }
         if !data["CardType"].isError {
