@@ -15,6 +15,13 @@ public func parseJsonData(data:String) -> NSDictionary?  {
     return nil
 }
 
+func jsonData(key:String, _ value:String?, _ addComma:Bool = true) -> String {
+    if let value = value {
+        return jsonData(key, value, addComma)
+    }
+    return ""
+}
+
 func jsonData(key:String, _ value:String, _ addComma:Bool = true) -> String {
     if value.length == 0 {
         return ""
@@ -22,7 +29,17 @@ func jsonData(key:String, _ value:String, _ addComma:Bool = true) -> String {
     return "\"" + key + "\":\"" + value + "\"" + (addComma ? "," : "")
 }
 
+func jsonDataArray(key:String, _ value:String, _ addComma:Bool = true) -> String {
+    if value.length == 0 {
+        return ""
+    }
+    return "\"" + key + "\":[" + value + "]" + (addComma ? "," : "")
+}
+
 func jsonData(key:String, _ value:Int, _ addComma:Bool = true) -> String {
+    if value == 0 {
+        return ""
+    }
     return "\"" + key + "\":" + String(value) + (addComma ? "," : "")
 }
 

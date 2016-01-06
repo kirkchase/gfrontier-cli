@@ -32,8 +32,8 @@ public class CardAction: CustomStringConvertible, CustomDebugStringConvertible, 
 
     public required init(data:JSON) {
         self.type = GFManager.sharedInstance.actionTypes[data["type"].asString ?? "ActionOpen"] ?? CardActionType(key: "Unknown CardActionType", name: "Unknown CardActionType", short: data["type"].asString!)
-        self.title = data["title"].asString ?? ""
-        self.instructions = data["instructions"].asString ?? ""
+        self.title = GFManager.sharedInstance.replaceTokens(data["title"].asString ?? "")
+        self.instructions = GFManager.sharedInstance.replaceTokens(data["instructions"].asString ?? "")
         self.range = GFManager.sharedInstance.effectRanges[data["range"].asString ?? "Character"] ?? EffectRange(key: "Unknown EffectRange", name: "Unknown CardActionType", short: data["range"].asString!)
         self.turnwide = data["turnwide"].asBool ?? false
         self.activated = data["activated"].asBool ?? false

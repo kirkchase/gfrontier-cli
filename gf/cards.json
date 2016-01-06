@@ -1,7 +1,23 @@
 {
 "Card":
     [
+     {"key":"NoScore","name":"No Score","type":"Marker","points":0,"instructions":"Place character with this card in the Discard Pile.","attributes":[],"tags":[],"moreTags":[],"actions":[{"type":"RemoveNPC","title":"Dicard NPC","instructions":"Discard this character. Do not score.","range":"Character","turnwide":false,"activated":false}]},
      {"key":"1Damage","name":"1-Damage","type":"Marker","points":0,"instructions":"Apply 1 DMG to character.","attributes":[{"DMG":1}],"tags":[],"moreTags":["Damage"],"actions":[]},
-     {"key":"HMSGalihad","name":"HMS Galihad","type":"Visitor","points":7,"image":"HMSGalihad.gif","attributes":[{"HIT":25},{"TAC":2},{"DEF":6},{"CMD":6},{"DIP":6},{"SCI":4},{"ENG":3}],"tags":["Ship","Klaton"],"moreTags":[],"actions":[{"type":"Weapon","title":"Beam","instructions":"DMG=STR","range":"Character","turnwide":false,"activated":false},{"type":"Weapon","title":"Missile","instructions":"DMG=5","range":"Character","turnwide":false,"activated":false},]}
-     ]
+     {"key":"10Damage","name":"10-Damage","type":"Marker","points":0,"instructions":"Apply 10 DMG to character.","attributes":[{"DMG":10},{"DEF":-10}],"tags":[],"moreTags":["Damage"],"actions":[]},
+     {"key":"20Damage","name":"20-Damage","type":"Marker","points":0,"instructions":"Apply 20 DMG to character.","attributes":[{"HIT":20},{"DMG":20},{"DEF":-15}],"tags":[],"moreTags":["Damage"],"actions":[]},
+     {"key":"5Damage","name":"5-Damage","type":"Marker","points":0,"instructions":"Apply 5 DMG to character.","attributes":[{"DMG":5},{"DEF":-5}],"tags":[],"moreTags":["Damage"],"actions":[]},
+     {"key":"OverrideAutomaton","name":"Automaton","type":"Marker","points":0,"instructions":"Character is of only this alliance; all others are suppressed.","attributes":[],"tags":[],"moreTags":["Automaton"],"actions":[]},
+     {"key":"OverrideCriton","name":"Criton","type":"Marker","points":0,"instructions":"Character is of only this alliance; all others are suppressed.","attributes":[],"tags":[],"moreTags":["Criton"],"actions":[]},
+     {"key":"Enemy","name":"Enemy","type":"Marker","points":0,"instructions":"Use this to mark a character hostile.","attributes":[],"tags":[],"moreTags":["Enemy"],"actions":[]},
+     {"key":"OverrideForeign","name":"Foreign","type":"Marker","points":0,"instructions":"Character is of only this alliance; all others are suppressed.","attributes":[],"tags":[],"moreTags":["Foreign"],"actions":[]},
+     {"key":"Friend","name":"Friend","type":"Marker","points":0,"instructions":"Use this to mark a character as a player character.","attributes":[],"tags":[],"moreTags":["Friend"],"actions":[]},
+     {"key":"Independent","name":"Independent","type":"Marker","points":0,"instructions":"Use this to mark a character as a non-player, non-hostile character.","attributes":[],"tags":[],"moreTags":["Neutral"],"actions":[]},
+     {"key":"OverrideKlaton","name":"Klaton","type":"Marker","points":0,"instructions":"Character is of only this alliance; all others are suppressed.","attributes":[],"tags":[],"moreTags":["Klaton"],"actions":[]},
+     {"key":"OverridePrivate","name":"Private","type":"Marker","points":0,"instructions":"Character is of only this alliance; all others are suppressed.","attributes":[],"tags":[],"moreTags":["Private"],"actions":[]},
+     {"key":"Selected","name":"Selected","type":"Marker","points":0,"instructions":"Use this to mark a character as selected.","attributes":[],"tags":[],"moreTags":[],"actions":[]},
+     {"key":"OverrideSkalle","name":"Skalle","type":"Marker","points":0,"instructions":"Character is of only this alliance; all others are suppressed.","attributes":[],"tags":[],"moreTags":["Skalle"],"actions":[]},
+     {"key":"Target","name":"Target","type":"Marker","points":0,"instructions":"Use this to mark a character as a target.","attributes":[],"tags":[],"moreTags":[],"actions":[]},
+     {"key":"OverrideTerran","name":"Terran","type":"Marker","points":0,"instructions":"Character is of only this alliance; all others are suppressed.","attributes":[],"tags":[],"moreTags":["Terran"],"actions":[]},
+     {"key":"OverrideTheed","name":"Theed","type":"Marker","points":0,"instructions":"Character is of only this alliance; all others are suppressed.","attributes":[],"tags":[],"moreTags":["Theed"],"actions":[]}
+    ]
 }

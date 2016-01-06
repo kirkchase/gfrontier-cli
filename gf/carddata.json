@@ -80,6 +80,7 @@
     "Constants":
     [
      {"key":"GT","name":">","short":">"},
+     {"key":"POP","name":"Population","short":"population"},
      {"key":"SearchPlay","name":"Search and Play","short":"\u1F50D"}
      ],
     "CardActionType":
@@ -119,23 +120,16 @@
      {"key":"System","name":"System","short":"System"},
      {"key":"Game","name":"Game","short":"Game"}
      ],
-    "CardDuration":
-    [
-     {"key":"Used","name":"Until Used","short":"Used","value":-2},
-     {"key":"Instant","name":"Instant","short":"Instant","value":-1},
-     {"key":"Game","name":"Game","short":"","value":0},
-     {"key":"1Turn","name":"1 Turn","short":"1","value":1},
-     {"key":"2Turn","name":"2 Turns","short":"2","value":2},
-     {"key":"3Turn","name":"3 Turns","short":"3","value":3},
-     {"key":"4Turn","name":"4 Turns","short":"4","value":4}
-     ],
     "CardUsage":
     [
-     {"key":"Game","name":"Game","short":"","value":0},
-     {"key":"1Time","name":"1 Time","short":"1","value":1},
-     {"key":"2Time","name":"2 Times","short":"2","value":2},
-     {"key":"3Time","name":"3 Times","short":"3","value":3},
-     {"key":"4Time","name":"4 Times","short":"4","value":4}
+     {"key":"1Turn","name":"1 Turn","short":"1 turn","value":1},
+     {"key":"2Turn","name":"2 Turns","short":"2 turns","value":2},
+     {"key":"3Turn","name":"3 Turns","short":"3 turns","value":3},
+     {"key":"4Turn","name":"4 Turns","short":"4 turns","value":4},
+     {"key":"1Time","name":"1 Time","short":"1 time","value":1},
+     {"key":"2Time","name":"2 Times","short":"2 times","value":2},
+     {"key":"3Time","name":"3 Times","short":"3 times","value":3},
+     {"key":"4Time","name":"4 Times","short":"4 times","value":4}
      ],
     "CardType":
     [

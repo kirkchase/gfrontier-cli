@@ -31,7 +31,13 @@ private func getSelectedIndex(prompt:String, _ count:Int) -> Int {
 }
 
 
-public func pauseit() {
+public func pauseit(blankLines:Bool = false) {
+    if blankLines {
+        print("")
+    }
     print("< Press Return to continue > ", terminator:"")
     let _ = stdin.read() as String?
+    if blankLines {
+        print("")
+    }
 }

@@ -1,7 +1,15 @@
-* Add differing card types (maybe script to do json from excel spreadsheet)
-* Add Damage Tag
-* Should turns be an attribute?
+* Add differing card types
+- missions
+- action
+- event
+- resource
+- location
+- visitor
+* keyid with prefix of Template
 * Json should produce an import
 * DisplayAllCards finished
 * Stacks
 * Game structure for game templates
+
+* Get rid of placement
+

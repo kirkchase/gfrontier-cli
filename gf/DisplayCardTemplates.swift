@@ -3,59 +3,43 @@ import Foundation
 private let CARD_GROUPING = 5
 
 private let displayMenuMap: [(title:String, payload:Any?, action: (_: Any?) -> String?)] = [
-    ("All", nil, dislplayCards),
-    ("Locations", GFManager.sharedInstance.cardTypes["Location"], dislplayCards),
-    ("Visitors", GFManager.sharedInstance.cardTypes["Visitor"], dislplayCards),
-    ("Resources", GFManager.sharedInstance.cardTypes["Resource"], dislplayCards),
-    ("Missions", GFManager.sharedInstance.cardTypes["Mission"], dislplayCards),
-    ("Events", GFManager.sharedInstance.cardTypes["Event"], dislplayCards),
-    ("Actions", GFManager.sharedInstance.cardTypes["Action"], dislplayCards),
-    ("Markers", GFManager.sharedInstance.cardTypes["Marker"], dislplayCards),
+    ("All", nil, displayCards),
+    ("Locations", GFManager.sharedInstance.cardTypes["Location"], displayCards),
+    ("Visitors", GFManager.sharedInstance.cardTypes["Visitor"], displayCards),
+    ("Resources", GFManager.sharedInstance.cardTypes["Resource"], displayCards),
+    ("Missions", GFManager.sharedInstance.cardTypes["Mission"], displayCards),
+    ("Events", GFManager.sharedInstance.cardTypes["Event"], displayCards),
+    ("Actions", GFManager.sharedInstance.cardTypes["Action"], displayCards),
+    ("Markers", GFManager.sharedInstance.cardTypes["Marker"], displayCards),
     ("Cancel", nil, cancelMenu)
 ]
 
-private func dislplayCards(parameter: Any?) -> String? {
-//    let cardType = GFManager.sharedInstance.cardTypes[name]
-//    let cards = getCardsByType(cardType)
-//    
-//    return name;
-    return nil;
+private func displayCards(parameter: Any?) -> String? {
+    let cards = getCardsByType(parameter as? CardType)
+    
+    for card in cards {
+        print(card.debugDescription)
+    }
+    pauseit(true)
+    
+    return "displayCards";
 }
 
 private func cancelMenu(parameter: Any?) -> String? {
     finished = true;
-    return "cancel"
+    return nil
 }
 
-private var finished = false;
+private var finished = false
 
 public func displayCardTemplates(parameter: Any?) -> String? {
+    finished = false
+    repeat {
+        let index = doMenuSelection("** Display Game Constants **", menuItems: displayMenuMap)
+        displayMenuMap[index].action(displayMenuMap[index].payload)
+    } while finished == false
     
-//    repeat {
-//    var cards = [Card]()
-    
-//    let action: String = getMenuAction("** Display Cards **", actionMap: displayMenuMap);
-//   } while !finished
-    //
-    //    print("All Cards")
-    //
-    //    var count = 0
-    //    for card in GFManager.sharedInstance.cardTemplates.values {
-    //        if count == CARD_GROUPING {
-    //            pause(">>>", blanks: false)
-    //            count = 0
-    //        } else {
-    //            count++
-    //        }
-    //
-    //        // print card
-    //        let points = (card.points > 0) ? String(card.points) : ""
-    //        let fi = String(format:"%@ %-20@ %3@", card.type.short, card.name.stringByPaddingToLength(20, withString: " ", startingAtIndex: 0), points.stringByPaddingToLength(3, withString: " ", startingAtIndex: 0))
-    //
-    //        print(fi)
-    //        print("**********")
-    //    }
-    return "aal"
+    return "displayCardTemplates"
 }
 
 private func getCardsByType(type: CardType?) -> [Card] {

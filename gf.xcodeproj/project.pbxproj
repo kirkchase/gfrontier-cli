@@ -11,6 +11,7 @@
 		7F0805F51BD044FE00E53DB7 /* CardActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0805F41BD044FE00E53DB7 /* CardActionType.swift */; };
 		7F1916E21BCD568B005C14DB /* CardAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1916E11BCD568B005C14DB /* CardAttribute.swift */; };
 		7F1916E41BCDAFD4005C14DB /* JsonAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1916E31BCDAFD4005C14DB /* JsonAble.swift */; };
+		7F1D85C71C3212090029E4B4 /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D85C61C3212090029E4B4 /* Dates.swift */; };
 		7F6DE70A1BCBF14F004DEEA7 /* CardDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE7091BCBF14F004DEEA7 /* CardDuration.swift */; };
 		7F6DE70C1BCC0BA5004DEEA7 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE70B1BCC0BA5004DEEA7 /* Label.swift */; };
 		7F6DE70E1BCC15F7004DEEA7 /* GFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DE70D1BCC15F7004DEEA7 /* GFManager.swift */; };
@@ -56,6 +57,7 @@
 		7F0805F41BD044FE00E53DB7 /* CardActionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardActionType.swift; sourceTree = "<group>"; };
 		7F1916E11BCD568B005C14DB /* CardAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardAttribute.swift; sourceTree = "<group>"; };
 		7F1916E31BCDAFD4005C14DB /* JsonAble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonAble.swift; sourceTree = "<group>"; };
+		7F1D85C61C3212090029E4B4 /* Dates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
 		7F6DE7091BCBF14F004DEEA7 /* CardDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDuration.swift; sourceTree = "<group>"; };
 		7F6DE70B1BCC0BA5004DEEA7 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		7F6DE70D1BCC15F7004DEEA7 /* GFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GFManager.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				F0551A681BCA1798009F6F91 /* Strings.swift */,
 				F0551A6C1BCA26B9009F6F91 /* json.swift */,
 				F064A1511BCA018600FBDFDF /* StreamScanner.swift */,
+				7F1D85C61C3212090029E4B4 /* Dates.swift */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				7F76A6C61BCC2D090027CD6C /* LabelValue.swift in Sources */,
 				F0551A691BCA1798009F6F91 /* Strings.swift in Sources */,
 				F064A1441BC9FFF500FBDFDF /* Card.swift in Sources */,
+				7F1D85C71C3212090029E4B4 /* Dates.swift in Sources */,
 				7FF636EF1BF13DD700DD3CFB /* DisplayConstants.swift in Sources */,
 				7FF636EA1BEEC6EB00DD3CFB /* Menu.swift in Sources */,
 				F064A1451BC9FFF500FBDFDF /* CardTag.swift in Sources */,

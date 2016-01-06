@@ -3,7 +3,6 @@ import Foundation
 private let topLevelMenu: [(title:String, payload:Any?, action: (_: Any?) -> String?)] = [
     ("CardTags", nil, displayTags),
     ("CardActionTypes", nil, displayCardActionTypes),
-    ("CardDurations", nil, displayCardDurations),
     ("CardTypes", nil, displayCardTypes),
     ("Cancel", "cancel", returnNil)
 ]
@@ -50,28 +49,6 @@ private func displayCardActionTypes(payload:Any?) -> String? {
     var count = 1
     var items = [CardActionType]();
     for (_, action) in GFManager.sharedInstance.actionTypes {
-        items.append(action)
-        
-    }
-    items.sortInPlace {$0.key < $1.key}
-    for action in items {
-        print("\(count). \(action.description)")
-        if (count % 10) == 0 {
-            pauseit()
-        }
-        count++;
-        
-    }
-    pauseit();
-    return "back"
-}
-
-private func displayCardDurations(payload:Any?) -> String? {
-    print("")
-    print("*** Card Durations **")
-    var count = 1
-    var items = [CardDuration]();
-    for (_, action) in GFManager.sharedInstance.durations {
         items.append(action)
         
     }

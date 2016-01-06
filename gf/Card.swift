@@ -18,14 +18,14 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
     
     
     // footer
-    var series  = "The Unknown"
-    var serial = 0
-    var copyrightDate = NSDate()
-    var copyrightHolder = "Kirk Chase"
     var destiny = 0
     var placement:String?
-    var duration:CardDuration? = nil
     var usages:CardUsage? = nil
+    
+    var series  = "The Unknown"
+    var serial = 0
+    var copyrightDate = 2015
+    var copyrightHolder = "Kirk Chase"
     
     // MARK: Computed Properties
     public var description: String {
@@ -41,44 +41,79 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
         working += jsonData("type", type.key)
         working += jsonData("name", name)
         working += jsonData("points", points)
+        working += jsonDataArray("tags", jsonTags(tags))
+
+        working += jsonData("image", image)
+        working += jsonData("instructions", instructions)
+        working += jsonDataArray("moreTags", jsonTags(moreTags))
+        working += jsonDataArray("attributes", jsonAttributes())
+        working += jsonDataArray("actions", jsonActions())
+        
+
+        // need to end on an always so that it has no comma
+        working += jsonData("destiny", destiny)
+        working += jsonData("placement", placement)
+        if let usages = usages {
+            working += jsonData("usages", usages.key)
+        }
         working += jsonData("series", series)
         working += jsonData("serial", serial)
-        working += jsonData("destiny", destiny)
-        if let placement = placement {
-            working += jsonData("placement", placement)
-        }
-        if let duration = duration {
-            working += jsonData("duration", duration.key)
-        }
-        if let image = image {
-            working += jsonData("image", image)
-        }
-        if let instructions = instructions {
-            working += jsonData("instructions", instructions)
-        }
         
-        if tags.count > 0 {
-            working += jsonTags("tags", tags)
-        }
-        if moreTags.count > 0 {
-            working += jsonTags("moreTags", moreTags)
-        }
-1
-        // need to end on an always so that it has no comma
-        working += jsonData("copyrightDate", copyrightDate.description)
+        working += jsonData("copyrightDate", copyrightDate)
         working += jsonData("copyrightHolder", copyrightHolder, false)
 
         return working
     }
     
-    private func jsonTags(key: String, _ tags:[CardTag]) -> String {
-        var working = "\"\(key)\":["
+    private func jsonTags(tags:[CardTag]) -> String {
+        var working = ""
         
-        for i in 0..<(tags.count - 1) {
-            working += tags[i].key + ","
+        var addComma = false
+        for tag in tags {
+            if addComma {
+                working += ","
+            }
+            working += "\"" + tag.key + "\""
+
+            addComma = true;
         }
-        working += tags[tags.count - 1].key + "]"
+        
         return working
+    }
+    
+    private func jsonActions() -> String {
+        var working = ""
+        
+        var addComma = false;
+        for action in actions {
+                if addComma {
+                    working += ","
+                }
+                working += action.json
+                
+                addComma = true
+        }
+        
+        return working;
+    }
+    
+    private func jsonAttributes() -> String {
+        var working = ""
+        
+        var addComma = false;
+        for (key, value) in attributes {
+            let node = jsonData(key,value, false)
+            if node.length > 0 {
+                if addComma {
+                    working += ","
+                }
+                working += "{" + node + "}"
+
+                addComma = true
+            }
+        }
+        
+        return working;
     }
     
     public var json: String {
@@ -95,34 +130,37 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
             self.type = GFManager.sharedInstance.cardTypes[data["type"].asString ?? "Resource"] ?? CardType(key: "Unknown CardType", name: "Unknown Cardype", short: data["type"].asString!)
             self.name = data["name"].asString!
             self.points = data["points"].asInt ?? 0
-//            self.series = data["series"].asString ?? "The Unknown"
-//            self.serial = data["serial"].asInt ?? 0
-//            self.copyrightDate = data["copyrightDate"].asDate ?? NSDate()
-//            self.copyrightHolder = data["copyrightHolder"].asString ?? "Kirk Chase"
-//            self.destiny = data["destiny"].asInt ?? 0
-//            self.placement = data["placement"].asString ?? ""
-//            self.duration = GFManager.sharedInstance.durations[data["duration"].asString ?? "Game"] ?? GFManager.sharedInstance.durations["Game"]!
-//            self.turns = data["turns"].asInt ?? 0
+            self.series = data["series"].asString ?? "The Unknown"
+            self.serial = data["serial"].asInt ?? 0
+            self.copyrightDate = data["copyrightDate"].asInt ?? 2015
+            self.copyrightHolder = data["copyrightHolder"].asString ?? "Kirk Chase"
+            self.destiny = data["destiny"].asInt ?? 0
+            self.placement = data["placement"].asString ?? nil
+            
+            if !data["usages"].isError {
+                self.usages = GFManager.sharedInstance.usages[data["usages"].asString!]
+            }
             
             // tags
-//            if listValid("tags", data) {
-//                loadTags("tags", container:tags, data:data)
-//            }
+            if listValid("tags", data) {
+                tags = loadTags("tags", container:tags, data:data)
+            }
             self.image = data["image"].asString ?? ""
-            self.instructions = data["instructions"].asString ?? ""
+            self.instructions = GFManager.sharedInstance.replaceTokens(data["instructions"].asString ?? "")
 
             // moreTags
-//            if listValid("moreTags", data) {
-//                loadTags("moreTags", container:tags, data:data)
-//            }
-//
-            if !data["attributes"].isError {
+            if listValid("moreTags", data) {
+                moreTags = loadTags("moreTags", container:moreTags, data:data)
+            }
+
+            if listValid("attributes",data) {
                 loadAttributes(data["attributes"])
             }
+
             // actions
-//            if listValid("actions", data) {
-//                loadActions(data)
-//            }
+            if listValid("actions", data) {
+                loadActions(data)
+            }
             
         } else {
             self.key = "ERROR"
@@ -132,7 +170,6 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
     
     private func initAttributesSkills() {
         attributes.removeAll()
-        attributes["TUR"] = 0;
         attributes["USE"] = 0;
         attributes["HIP"] = 0;
         attributes["DMG"] = 0;
@@ -145,21 +182,13 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
     }
     
     private func loadAttributes(data:JSON) {
-        loadConditionalAttribute("TUR", data)
-        loadConditionalAttribute("USE", data)
-        loadConditionalAttribute("HIT", data)
-        loadConditionalAttribute("DMG", data)
-        loadConditionalAttribute("TAC", data)
-        loadConditionalAttribute("DEF", data)
-        loadConditionalAttribute("CMD", data)
-        loadConditionalAttribute("DIP", data)
-        loadConditionalAttribute("SCI", data)
-        loadConditionalAttribute("ENG", data)
-    }
-    
-    private func loadConditionalAttribute(key:String, _ data:JSON) {
-        if !data[key].isError {
-            attributes[key] = data[key].asInt!
+        initAttributesSkills()
+        let working = data.asArray!
+        for i in 0..<working.count {
+            let dictionary = working[i].asDictionary!
+            for (key, value) in dictionary {
+                attributes[key] = value.asInt!
+            }
         }
     }
     
@@ -172,20 +201,24 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
         }
     }
     
-    private func loadTags(key:String, var container:[CardTag], data:JSON) {
+    private func loadTags(key:String, var container:[CardTag], data:JSON) -> [CardTag] {
         let working = data[key].asArray!
         for i in 0..<working.count {
-            if let tag = working[i].asString {
-                container.append(GFManager.sharedInstance.tags[tag]!)
+            if let key = working[i].asString {
+                let tag = GFManager.sharedInstance.tags[key]!
+                container.append(tag)
             }
         }
+        
+        return container
     }
     
     private func listValid(key:String, _ data:JSON) -> Bool {
         if !data[key].isArray {
             return false
         }
-        if data[key].asArray?.count == 0 {
+        let array = data[key].asArray!
+        if array.count == 0 {
             return false;
         }
         
