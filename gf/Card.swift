@@ -32,6 +32,72 @@ public class Card: CustomStringConvertible, CustomDebugStringConvertible, JsonAb
         return "\(type.short): \(name)"
     }
     
+    public func printPrettyDescription() {
+        print("[\(type.short) \(name) \(points)]");
+        var working = "";
+        for tag in tags {
+            if (working.length > 0) {
+                working += " "
+            }
+            working += tag.short;
+        }
+        if working.length > 0 {
+            print(working)
+        }
+        
+        if let image = image {
+            if (image.length > 0) {
+                print(image)
+            }
+        }
+        
+        if let instructions = instructions {
+            if (instructions.length > 0) {
+                print(instructions)
+            }
+        }
+        
+        working = "";
+        working += prettyAttribute("HIP")
+        working += prettyAttribute("DMG")
+        working += prettyAttribute("TAC")
+        working += prettyAttribute("DEF")
+        working += prettyAttribute("CMD")
+        working += prettyAttribute("DIP")
+        working += prettyAttribute("SCI")
+        working += prettyAttribute("ENG")
+        working += prettyAttribute("USE")
+        if (working.length > 0) {
+            print(working)
+        }
+        
+        working = "";
+        for tag in moreTags {
+            if (working.length > 0) {
+                working += " "
+            }
+            working += tag.short;
+        }
+        if working.length > 0 {
+            print(working)
+        }
+        
+        // actions
+
+        print("#\(serial) \(series) ©\(copyrightDate) \(copyrightHolder)")
+        
+        print("**********")
+    }
+    
+    private func prettyAttribute(name:String) -> String {
+        if let attribute = attributes[name] {
+            if attribute > 0 {
+                return (name + "=" + String(attribute) + " ");
+            }
+        }
+        return ""
+    }
+    
     public var debugDescription: String {
         return json
     }

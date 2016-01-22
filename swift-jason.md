@@ -1,12 +1,13 @@
 swift-json
 ==========
 
-Even Swiftier JSON Handler
+Even Swiftier JSON Handler 
 
 Prerequisite
 ------------
 
 Swift 2.0 or better.  For Swift 1.x and below check the swift-1.x branch (which is no longer maintained)
+Update
 
 
 Usage

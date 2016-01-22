@@ -75,12 +75,18 @@
      {"key":"Satellite","name":"Satellite","short":"\u1F6F0"},
      {"key":"SpaceMines","name":"Space Mines","short":"\u29F1"},
      {"key":"SpacePort","name":"Space Port","short":"Space Port"},
-     {"key":"Damage","name":"Damage","short":"\u1F4A5"}
+     {"key":"Damage","name":"Damage","short":"Damage"}
      ],
     "Constants":
     [
      {"key":"GT","name":">","short":">"},
      {"key":"POP","name":"Population","short":"population"},
+     {"key":"DestinyDraw","name":"Destiny Draw","short":"DD"},
+     {"key":"TourDeck","name":"Tour Deck","short":"Tour Deck"},
+     {"key":"Hand","name":"Hand","short":"Hand"},
+     {"key":"PointsPile","name":"Points Pile","short":"Points Pile"},
+     {"key":"DiscardPile","name":"Discard Pile","short":"Discard Pile"},
+     {"key":"MissionsPile","name":"Missions Pile","short":"Missions Pile"},
      {"key":"SearchPlay","name":"Search and Play","short":"\u1F50D"}
      ],
     "CardActionType":

@@ -18,7 +18,8 @@ private func displayCards(parameter: Any?) -> String? {
     let cards = getCardsByType(parameter as? CardType)
     
     for card in cards {
-        print(card.debugDescription)
+        card.printPrettyDescription()
+        pauseit(true)
     }
     pauseit(true)
     
