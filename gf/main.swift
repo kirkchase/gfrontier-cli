@@ -21,6 +21,7 @@ if let filePath = NSBundle.mainBundle().pathForResource("gfdata/carddata",ofType
 }
 
 //TODO need to load in images
+//TODO update on local machine
 
 if let filePath = NSBundle.mainBundle().pathForResource("gfdata/cards",ofType:"json") {
     print("Loading cards...")
