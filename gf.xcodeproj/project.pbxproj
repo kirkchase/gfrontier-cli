@@ -64,6 +64,7 @@
 		7F76A6C31BCC2BE70027CD6C /* CardUsage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardUsage.swift; sourceTree = "<group>"; };
 		7F76A6C51BCC2D090027CD6C /* LabelValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelValue.swift; sourceTree = "<group>"; };
 		7F76A6C91BCC5B6D0027CD6C /* CardAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardAction.swift; sourceTree = "<group>"; };
+		7F8403721C57DEC500F7A617 /* cardexamples.idraw */ = {isa = PBXFileReference; lastKnownFileType = file; path = cardexamples.idraw; sourceTree = "<group>"; };
 		7F8AEAAC1BE11CC4006559A0 /* DisplayCardTemplates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayCardTemplates.swift; sourceTree = "<group>"; };
 		7FDCC3531BE7F7E6008E1176 /* GF-TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GF-TODO"; sourceTree = "<group>"; };
 		7FDCC3551BEA816D008E1176 /* cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
@@ -224,6 +225,7 @@
 				F0551A6E1BCA26E9009F6F91 /* swift-jason.md */,
 				F064A14D1BCA002600FBDFDF /* GF Data.xlsx */,
 				F064A14E1BCA002600FBDFDF /* GF Docs.txt */,
+				7F8403721C57DEC500F7A617 /* cardexamples.idraw */,
 				7FDCC3531BE7F7E6008E1176 /* GF-TODO */,
 			);
 			name = docs;

@@ -4,7 +4,11 @@
 - event
 - resource
 - location
+  - templates
 - visitor
+  - templates
+- marker
+  - overrides for all alliances
 * keyid with prefix of Template
 * Json should produce an import
 * DisplayAllCards finished
