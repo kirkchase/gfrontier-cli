@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT locked="TRUE">
+	<RECORD>
+		<id>DeckSystem</id>
+		<imagefile>DeckSystem.gif</imagefile>
+	</RECORD>
+	<RECORD>
+		<id>DeckSystemII</id>
+		<imagefile>DeckSystemII.gif</imagefile>
+	</RECORD>
+	<RECORD>
+		<id>DeckSystemIII</id>
+		<imagefile>DeckSystemIII.gif</imagefile>
+	</RECORD>
+	<RECORD>
+		<id>DeckShip</id>
+		<imagefile>DeckShip.gif</imagefile>
+	</RECORD>
+	<RECORD>
+		<id>DeckShipII</id>
+		<imagefile>DeckShipII.gif</imagefile>
+	</RECORD>
+	<RECORD>
+		<id>DeckShipIII</id>
+		<imagefile>DeckShipIII.gif</imagefile>
+	</RECORD>
+</ROOT>

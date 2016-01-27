@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : npcguides.xml
+    Created on : June 25, 2009, 10:23 AM
+    Author     : kchase
+    Description:
+        Purpose of the document follows.
+-->
+
+<ROOT>
+	<RECORD>
+		<id>generalplanet</id>
+		<name>Planet</name>
+		<play>In open system.</play>
+		<options></options>
+		<objective></objective>
+		<speed>0</speed>
+		<task1>TASK_NONE</task1>
+		<task2>TASK_NONE</task2>
+		<task3>TASK_NONE</task3>
+		<task4>TASK_NONE</task4>
+		<task5>TASK_NONE</task5>
+		<task6>TASK_NONE</task6>
+		<evttype1>EVENT_NONE</evttype1>
+		<evtname1></evtname1>
+		<evtuses1>0</evtuses1>
+		<evtdescription1></evtdescription1>
+		<evttype2>EVENT_NONE</evttype2>
+		<evtname2></evtname2>
+		<evtuses2>0</evtuses2>
+		<evtdescription2></evtdescription2>
+		<evttype3>EVENT_NONE</evttype3>
+		<evtname3></evtname3>
+		<evtuses3>0</evtuses3>
+		<evtdescription3></evtdescription3>
+		<target1>TARGET_LAST</target1>
+		<plan1>Standard, Special, Standard</plan1>
+		<target2>TARGET_HOSTILE</target2>
+		<plan2>Standard, Special, Standard</plan2>
+		<target3>TARGET_ENEMY</target3>
+		<plan3>Standard, Special, Standard</plan3>
+		<target4>TARGET_NONE</target4>
+		<plan4></plan4>
+		<target5>TARGET_NONE</target5>
+		<plan5></plan5>
+		<target6>TARGET_NONE</target6>
+		<plan6></plan6>
+	</RECORD>
+	<RECORD>
+		<id>generalship</id>
+		<name>Ship</name>
+		<play>Play in a system of same alliance | Play in a non-enemy system.</play>
+		<options></options>
+		<objective></objective>
+		<speed>0</speed>
+		<task1>TASK_NONE</task1>
+		<task2>TASK_NONE</task2>
+		<task3>TASK_NONE</task3>
+		<task4>TASK_NONE</task4>
+		<task5>TASK_NONE</task5>
+		<task6>TASK_NONE</task6>
+		<evttype1>EVENT_NONE</evttype1>
+		<evtname1></evtname1>
+		<evtuses1>0</evtuses1>
+		<evtdescription1></evtdescription1>
+		<evttype2>EVENT_NONE</evttype2>
+		<evtname2></evtname2>
+		<evtuses2>0</evtuses2>
+		<evtdescription2></evtdescription2>
+		<evttype3>EVENT_NONE</evttype3>
+		<evtname3></evtname3>
+		<evtuses3>0</evtuses3>
+		<evtdescription3></evtdescription3>
+		<target1>TARGET_LAST</target1>
+		<plan1>Standard, Special, Standard</plan1>
+		<target2>TARGET_HOSTILE</target2>
+		<plan2>Standard, Special, Standard</plan2>
+		<target3>TARGET_ENEMY</target3>
+		<plan3>Standard, Special, Standard</plan3>
+		<target4>TARGET_NONE</target4>
+		<plan4></plan4>
+		<target5>TARGET_NONE</target5>
+		<plan5></plan5>
+		<target6>TARGET_NONE</target6>
+		<plan6></plan6>
+	</RECORD>
+</ROOT>
+
+<!--
+<ROOT>
+	<RECORD>
+		<id></id>
+		<name></name>
+		<play></play>
+		<options></options>
+		<objective></objective>
+		<speed>1</speed>
+		<task1>TASK_NONE</task1>
+		<task2>TASK_NONE</task2>
+		<task3>TASK_NONE</task3>
+		<task4>TASK_NONE</task4>
+		<task5>TASK_NONE</task5>
+		<task6>TASK_NONE</task6>
+		<evttype1>EVENT_NONE</evttype1>
+		<evtname1></evtname1>
+		<evtuses1>0</evtuses1>
+		<evtdescription1></evtdescription1>
+		<evttype2>EVENT_NONE</evttype2>
+		<evtname2></evtname2>
+		<evtuses2>0</evtuses2>
+		<evtdescription2></evtdescription2>
+		<evttype3>EVENT_NONE</evttype3>
+		<evtname3></evtname3>
+		<evtuses3>0</evtuses3>
+		<evtdescription3></evtdescription3>
+		<target1>TARGET_NONE</target1>
+		<plan1></plan1>
+		<target2>TARGET_NONE</target2>
+		<plan2></plan2>
+		<target3>TARGET_NONE</target3>
+		<plan3></plan3>
+		<target4>TARGET_NONE</target4>
+		<plan4></plan4>
+		<target5>TARGET_NONE</target5>
+		<plan5></plan5>
+		<target6>TARGET_NONE</target6>
+		<plan6></plan6>
+	</RECORD>
+</ROOT>
+-->
+
+<!--
+Options:
+ENEMY
+INDEPENDENT
+FRIEND
+SCORE
+DISCARD
+REQUESTX
+ACCEPT
+
+Tags:
+(SAFE)
+(SMART)
+(PAUSE)
+(RESET)
+
+Task Types:
+TASK_NONE
+
+Target Types:
+TARGET_NONE - no attack
+TARGET_DEFENSE - no offensive weapon, for attacks this is like none
+TARGET_RANDOM - random independent or enemy
+TARGET_LAST - character this character attacked last turn
+TARGET_HOSTILE - character that has attacked this character this turn
+TARGET_ENEMY - enemy
+TARGET_OBJECTIVE - mission objective
+-->
